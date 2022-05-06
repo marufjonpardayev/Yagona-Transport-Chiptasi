@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
     }
 
-    //wlfkjnksejfes, cidv dsljk vjsvb dsv skjdl
+    //wlfkjnksejfes, cidv dsljk vjsvb dsv skjdldwmf vjeb rbev  ve
     private fun setupUI() {
         navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavigationView.setupWithNavController(navController)
