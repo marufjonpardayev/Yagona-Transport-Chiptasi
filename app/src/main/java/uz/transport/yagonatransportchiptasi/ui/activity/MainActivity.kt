@@ -21,15 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupUI()
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        )
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
     }
 
-    //wlfkjnksejfes, cidv dsljk vjsvb dsv skjdldwmf vjeb rbev  ve
     private fun setupUI() {
         navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavigationView.setupWithNavController(navController)
