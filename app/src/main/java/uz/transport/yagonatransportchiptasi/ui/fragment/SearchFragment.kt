@@ -28,6 +28,7 @@ class SearchFragment : Fragment() {
         }
     }
 
+    //to change directions
     private fun changeDestinations() {
         binding.apply {
             if (tvFrom.text.isNotEmpty() && tvTo.text.isNotEmpty()) {
