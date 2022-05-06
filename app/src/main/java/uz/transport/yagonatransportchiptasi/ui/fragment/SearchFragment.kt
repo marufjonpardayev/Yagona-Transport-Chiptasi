@@ -32,7 +32,7 @@ class SearchFragment : Fragment() {
         binding.llCalendarDeparture.setOnClickListener {
             val intent = Intent(requireContext(), CalendarActivity::class.java)
             intent.putExtra("locationStart", "Toshkent")
-            intent.putExtra("locationEnd", "Toshkent")
+            intent.putExtra("locationEnd", "Moskva")
             startActivity(intent)
         }
     }
