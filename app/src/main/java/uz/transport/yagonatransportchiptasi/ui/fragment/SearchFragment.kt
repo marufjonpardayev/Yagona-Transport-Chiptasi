@@ -29,6 +29,7 @@ class SearchFragment : Fragment() {
             changeDestinations()
         }
 
+        //open CalendarActivity
         binding.llCalendarDeparture.setOnClickListener {
             val intent = Intent(requireContext(), CalendarActivity::class.java)
             intent.putExtra("locationStart", "Toshkent")
