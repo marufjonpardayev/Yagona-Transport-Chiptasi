@@ -55,4 +55,7 @@ dependencies {
     //glide
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+
+    //https://github.com/CleverPumpkin/CrunchyCalendar
+    implementation 'ru.cleverpumpkin:crunchycalendar:2.2.0'
 }
