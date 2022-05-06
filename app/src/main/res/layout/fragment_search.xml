@@ -63,57 +63,69 @@
             android:id="@+id/linearOptions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="130dp"
             android:paddingVertical="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolBar">
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <TextView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="@color/dark_blue"
-                app:layout_constraintStart_toStartOf="parent"
-                app:shapeAppearanceOverlay="@style/circle" />
+                android:background="@drawable/circle_imageview"
+                android:gravity="center"
+                android:text="All"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
-                android:background="@color/dark_blue"
+                android:background="@drawable/circle_imageview"
+                android:padding="9dp"
+                android:src="@drawable/ic_plane"
                 app:layout_constraintStart_toStartOf="parent"
-                app:shapeAppearanceOverlay="@style/circle" />
+                app:tint="@color/white" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
-                android:background="@color/dark_blue"
-                app:layout_constraintStart_toStartOf="parent"
-                app:shapeAppearanceOverlay="@style/circle" />
+                android:background="@drawable/circle_imageview"
+                android:padding="9dp"
+                android:src="@drawable/ic_train"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
-                android:background="@color/dark_blue"
-                app:layout_constraintStart_toStartOf="parent"
-                app:shapeAppearanceOverlay="@style/circle" />
+                android:background="@drawable/circle_imageview"
+                android:padding="9dp"
+                android:src="@drawable/ic_bus"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
-                android:background="@color/dark_blue"
-                app:layout_constraintStart_toStartOf="parent"
-                app:shapeAppearanceOverlay="@style/circle" />
+                android:background="@drawable/circle_imageview"
+                android:padding="9dp"
+                android:src="@drawable/ic_hotel"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
-                android:background="@color/dark_blue"
+                android:background="@drawable/circle_imageview"
+                android:padding="9dp"
+                android:src="@drawable/ic_travel"
                 app:layout_constraintStart_toStartOf="parent"
-                app:shapeAppearanceOverlay="@style/circle" />
+                app:tint="@color/white" />
         </LinearLayout>
 
         <TextView
@@ -126,7 +138,7 @@
             android:hint="Qayerdan?"
             android:textColor="@color/white"
             android:textColorHint="@color/tint_color"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearOptions" />
@@ -160,7 +172,7 @@
             android:hint="Qayerga?"
             android:textColor="@color/white"
             android:textColorHint="@color/tint_color"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/vwWhite" />
@@ -214,7 +226,7 @@
                         android:hint="Jo'nash"
                         android:textColor="@color/white"
                         android:textColorHint="@color/tint_color"
-                        android:textSize="24sp"
+                        android:textSize="22sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -247,7 +259,7 @@
                     android:hint="Orqaga"
                     android:textColor="@color/white"
                     android:textColorHint="#BABABA"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <View
@@ -283,7 +295,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:background="@drawable/linear_background"
         android:orientation="vertical"
         android:padding="12dp"
@@ -303,7 +315,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="20dp">
 
             <LinearLayout
                 android:layout_width="0dp"

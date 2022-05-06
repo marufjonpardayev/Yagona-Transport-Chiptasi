@@ -1,6 +1,5 @@
 package uz.transport.yagonatransportchiptasi.ui.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentSearchBinding
-import uz.transport.yagonatransportchiptasi.ui.activity.CalendarActivity
 
 class SearchFragment : Fragment() {
 
@@ -27,17 +25,6 @@ class SearchFragment : Fragment() {
 
         binding.ivChange.setOnClickListener {
             changeDestinations()
-        }
-
-        initViews()
-    }
-
-    private fun initViews() {
-        binding.llCalendarDeparture.setOnClickListener {
-            val intent = Intent(requireContext(), CalendarActivity::class.java)
-            intent.putExtra("locationStart", "Toshkent")
-            intent.putExtra("locationEnd", "Moskva")
-            startActivity(intent)
         }
     }
 
