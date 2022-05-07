@@ -197,6 +197,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/white"
         android:elevation="0dp"
+        android:id="@+id/appBarLayout"
         android:stateListAnimator="@null">
 
         <androidx.appcompat.widget.Toolbar

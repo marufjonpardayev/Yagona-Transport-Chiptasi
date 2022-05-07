@@ -1,9 +1,10 @@
 package uz.transport.yagonatransportchiptasi.ui.activity
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import ru.cleverpumpkin.calendar.CalendarDate
 import ru.cleverpumpkin.calendar.CalendarView
@@ -11,6 +12,9 @@ import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.ActivityCalendarBinding
 import java.util.*
 
+/**
+ * in this activity, the user selects the time of departure and arrival
+ */
 class CalendarActivity : AppCompatActivity() {
     lateinit var binding: ActivityCalendarBinding
 
@@ -28,14 +32,31 @@ class CalendarActivity : AppCompatActivity() {
     private fun initViews() {
         val locationStart = intent.getStringExtra("locationStart")
         val locationEnd = intent.getStringExtra("locationEnd")
+        val type = intent.getStringExtra("type")
 
         binding.ivClose.setOnClickListener { finish() }
 
         binding.tvAddress.text = "$locationStart - $locationEnd"
 
         calendar()
+
+
+
+        binding.calendarView.onDateClickListener = { date ->
+
+            var intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("day", "${date.dayOfMonth}")
+            intent.putExtra("month", "${date.month}")
+            intent.putExtra("year", "${date.year}")
+            intent.putExtra("type", "${type}")
+            setResult(RESULT_OK,intent)
+            finish()
+        }
     }
 
+    /**
+     * this fun calendar control
+     */
     private fun calendar() {
         val calendar = Calendar.getInstance()
 
@@ -49,7 +70,7 @@ class CalendarActivity : AppCompatActivity() {
         calendar.set(year, month, day)
         val minDate = CalendarDate(calendar.time)
 
-        calendar.set(year + 1, month, day)
+        calendar.set(year, month + 3, day)
         val maxDate = CalendarDate(calendar.time)
 
 
