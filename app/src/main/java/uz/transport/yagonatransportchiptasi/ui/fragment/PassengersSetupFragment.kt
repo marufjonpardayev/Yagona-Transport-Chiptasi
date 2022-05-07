@@ -1,15 +1,12 @@
 package uz.transport.yagonatransportchiptasi.ui.fragment
 
-import android.graphics.PorterDuff
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupBinding
-import uz.transport.yagonatransportchiptasi.ui.activity.MainActivity
 
 
 class PassengersSetupFragment : Fragment() {

@@ -1,7 +1,5 @@
 package uz.transport.yagonatransportchiptasi.ui.fragment
 
-import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment

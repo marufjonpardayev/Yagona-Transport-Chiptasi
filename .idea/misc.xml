@@ -4,17 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android development/yagona transport chiptasi/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_close.xml" value="0.133" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/linear_background_vagon.xml" value="0.133" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/rounded_textview.xml" value="0.133" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_calendar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_main.xml" value="0.16111111111111112" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passengers_setup.xml" value="0.22" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_profile.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/ic_swap_right.xml" value="0.1415" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/item_oval.xml" value="0.1415" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/item_oval_grey.xml" value="0.1415" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_calendar.xml" value="0.1334853090172239" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_main.xml" value="0.10733695652173914" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_orders.xml" value="0.21784420289855072" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_search.xml" value="0.1334853090172239" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_tickets.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_train_details.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_biznes.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_ekonom.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_kupe.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_lyuks.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_platskart.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_vip.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_afrosiyob.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_popular.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_sharq.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_special.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>
