@@ -32,5 +32,23 @@
         android:id="@+id/passengersSetupFragment"
         android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengersSetupFragment"
         android:label="fragment_passengers_setup"
-        tools:layout="@layout/fragment_passengers_setup" />
+        tools:layout="@layout/fragment_passengers_setup" >
+        <action
+            android:id="@+id/action_passengersSetupFragment_to_passengerDetailFragment"
+            app:destination="@id/passengerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passengerDetailFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengerDetailFragment"
+        android:label="fragment_passenger_detail"
+        tools:layout="@layout/fragment_passenger_detail" >
+        <action
+            android:id="@+id/action_passengerDetailFragment_to_passengerDetailEntryFragment"
+            app:destination="@id/passengerDetailEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passengerDetailEntryFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengerDetailEntryFragment"
+        android:label="fragment_passenger_detail_entry"
+        tools:layout="@layout/fragment_passenger_detail_entry" />
 </navigation>

@@ -13,7 +13,11 @@
         <!-- Customize your theme here. -->
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
+    </style>
 
+    <style name="WhiteCheck">
+        <item name="colorAccent">@color/center_color</item>
+        <item name="colorControlNormal">@color/darker_grey</item>
     </style>
 
     <style name="circle">
