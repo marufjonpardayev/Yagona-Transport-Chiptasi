@@ -18,8 +18,8 @@ class CalendarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCalendarBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.white))
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        window.statusBarColor = ContextCompat.getColor(this,R.color.white)
 
         initViews()
     }
@@ -63,6 +63,5 @@ class CalendarActivity : AppCompatActivity() {
             firstDayOfWeek = firstDayOfWeek,
             showYearSelectionView = true
         )
-
     }
 }

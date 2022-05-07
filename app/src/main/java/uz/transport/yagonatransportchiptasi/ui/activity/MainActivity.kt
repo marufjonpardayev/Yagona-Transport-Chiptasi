@@ -3,6 +3,7 @@ package uz.transport.yagonatransportchiptasi.ui.activity
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.findNavController

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,69 +21,69 @@
 
             <ru.cleverpumpkin.calendar.CalendarView
                 android:id="@+id/calendar_view"
+                style="@style/CalendarViewCustomStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:overScrollMode="never"
-                style="@style/CalendarViewCustomStyle"
                 app:calendar_date_background_tint="@color/white"
-                app:calendar_grid_color="@color/white"/>
+                app:calendar_grid_color="@color/white" />
 
             <LinearLayout
-                android:layout_marginTop="65dp"
-                android:background="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:background="@color/white">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Dush"
-                        android:textSize="12sp"
-                        android:textColor="@color/grey"/>
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey"/>
+                        android:background="@color/grey" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Sesh"
-                        android:textSize="12sp"
-                        android:textColor="@color/grey"/>
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey"/>
+                        android:background="@color/grey" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -91,21 +91,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Chor"
-                        android:textSize="12sp"
-                        android:textColor="@color/grey"/>
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey"/>
+                        android:background="@color/grey" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -113,21 +113,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Pay"
-                        android:textSize="12sp"
-                        android:textColor="@color/grey"/>
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey"/>
+                        android:background="@color/grey" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -135,21 +135,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Jum"
-                        android:textSize="12sp"
-                        android:textColor="@color/grey"/>
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey"/>
+                        android:background="@color/grey" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -157,21 +157,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Shan"
-                        android:textSize="12sp"
-                        android:textColor="@color/red"/>
+                        android:textColor="@color/red"
+                        android:textSize="12sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/red"/>
+                        android:background="@color/red" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -179,25 +179,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Yak"
-                        android:textSize="12sp"
-                        android:textColor="@color/red"/>
+                        android:textColor="@color/red"
+                        android:textSize="12sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/red"/>
+                        android:background="@color/red" />
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:elevation="0dp"
-        android:stateListAnimator="@null"
-        android:layout_height="wrap_content">
+        android:stateListAnimator="@null">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -208,25 +208,23 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-               <LinearLayout
-                   android:layout_width="30dp"
-                   android:layout_height="match_parent"
-                   android:gravity="center|start">
 
-                   <ImageView
-                       android:id="@+id/iv_close"
-                       android:layout_width="22dp"
-                       android:layout_height="22dp"
-                       android:src="@drawable/ic_close" />
-               </LinearLayout>
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/black" />
 
                 <TextView
                     android:id="@+id/tv_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/font_for_texts"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
