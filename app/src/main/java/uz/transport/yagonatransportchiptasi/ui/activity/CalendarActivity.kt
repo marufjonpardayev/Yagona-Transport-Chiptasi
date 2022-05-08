@@ -40,11 +40,9 @@ class CalendarActivity : AppCompatActivity() {
 
         calendar()
 
-
-
         binding.calendarView.onDateClickListener = { date ->
 
-            var intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("day", "${date.dayOfMonth}")
             intent.putExtra("month", "${date.month}")
             intent.putExtra("year", "${date.year}")
@@ -72,7 +70,6 @@ class CalendarActivity : AppCompatActivity() {
 
         calendar.set(year, month + 3, day)
         val maxDate = CalendarDate(calendar.time)
-
 
         val firstDayOfWeek = Calendar.MONDAY
 
