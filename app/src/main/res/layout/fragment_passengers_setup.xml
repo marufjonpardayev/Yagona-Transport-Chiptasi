@@ -91,11 +91,22 @@
                 android:id="@+id/tvAdults"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kattalar: 1"
+                android:text="Kattalar: "
                 android:textColor="#BF000000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAdultsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#BF000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tvAdults"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -112,12 +123,13 @@
                 android:id="@+id/tvAddAdult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_textview"
+                android:background="@drawable/rounded_textview_blue"
                 android:paddingHorizontal="11dp"
                 android:paddingVertical="5dp"
                 android:text="+"
-                android:textColor="@color/black"
+                android:textColor="@color/center_color"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -133,6 +145,7 @@
                 android:text="-"
                 android:textColor="@color/black"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tvAddAdult"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -165,11 +178,22 @@
                 android:id="@+id/tvChildren"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bolalar: 1"
+                android:text="Bolalar: "
                 android:textColor="#BF000000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvChildrenNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#BF000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tvChildren"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -186,12 +210,13 @@
                 android:id="@+id/tvAddChildren"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_textview"
+                android:background="@drawable/rounded_textview_blue"
                 android:paddingHorizontal="11dp"
                 android:paddingVertical="5dp"
                 android:text="+"
-                android:textColor="@color/black"
+                android:textColor="@color/center_color"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -207,6 +232,7 @@
                 android:text="-"
                 android:textColor="@color/black"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tvAddChildren"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -239,11 +265,22 @@
                 android:id="@+id/tvInfants"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bolalar(o'rinsiz): 1"
+                android:text="Bolalar(o'rinsiz): "
                 android:textColor="#BF000000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvInfantsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#BF000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tvInfants"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -260,12 +297,13 @@
                 android:id="@+id/tvAddInfant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_textview"
+                android:background="@drawable/rounded_textview_blue"
                 android:paddingHorizontal="11dp"
                 android:paddingVertical="5dp"
                 android:text="+"
-                android:textColor="@color/black"
+                android:textColor="@color/center_color"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -281,6 +319,7 @@
                 android:text="-"
                 android:textColor="@color/black"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tvAddInfant"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -329,6 +368,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
+        android:checked="true"
         android:text="Pastki"
         android:textColor="@color/black"
         android:theme="@style/WhiteCheck"
@@ -341,6 +381,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
+        android:checked="true"
         android:text="Yuqori"
         android:textColor="@color/black"
         android:theme="@style/WhiteCheck"
