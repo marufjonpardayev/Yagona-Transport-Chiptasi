@@ -74,7 +74,7 @@ class CalendarActivity : AppCompatActivity() {
         val maxDate = CalendarDate(calendar.time)
 
 
-        val firstDayOfWeek = java.util.Calendar.MONDAY
+        val firstDayOfWeek = Calendar.MONDAY
 
         binding.calendarView.setupCalendar(
             initialDate = initialDate,
