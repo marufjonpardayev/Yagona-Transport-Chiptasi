@@ -37,6 +37,7 @@ class SearchFragment : Fragment() {
                 openCalendarActivity()
             }
 
+            //open
             btnSearch.setOnClickListener {
                 openPassengerSetupFragment()
             }
