@@ -265,4 +265,10 @@
         <item>Farg\'ona viloyati</item>
         <item>Xorazm viloyati</item>
     </string-array>
+
+    <string-array name="privileges">
+        <item>Talaba</item>
+        <item>Urush qatnashchisi</item>
+        <item>Harbiy</item>
+    </string-array>
 </resources>

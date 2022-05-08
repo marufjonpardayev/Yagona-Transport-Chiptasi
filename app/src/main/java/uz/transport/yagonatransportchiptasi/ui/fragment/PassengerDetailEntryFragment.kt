@@ -46,19 +46,35 @@ class PassengerDetailEntryFragment : Fragment() {
         }
 
         val resources = requireActivity().resources
-        setAdapterToSpinnerDocType(
+
+        setAdapterToSpinner(
             resources.getStringArray(R.array.documents),
             binding.spinnerDocumentType
         )
-        setAdapterToSpinnerDocType(
+
+        setAdapterToSpinner(
             resources.getStringArray(R.array.countries),
             binding.spinnerCountry
         )
-        setAdapterToSpinnerDocType(resources.getStringArray(R.array.regions), binding.spinnerCity)
+        setAdapterToSpinner(resources.getStringArray(R.array.regions), binding.spinnerCity)
+
+        setAdapterToSpinner(resources.getStringArray(R.array.privileges), binding.spinnerPrivilege)
+
+        controlPrivilege()
+    }
+
+    private fun controlPrivilege() {
+        binding.checkboxPrivilege.setOnClickListener {
+            if (binding.checkboxPrivilege.isChecked) {
+                binding.spinnerPrivilege.visibility = View.VISIBLE
+            } else {
+                binding.spinnerPrivilege.visibility = View.GONE
+            }
+        }
     }
 
     //setting adapter to any spinner
-    private fun setAdapterToSpinnerDocType(entries: Array<String>, spinner: AppCompatSpinner) {
+    private fun setAdapterToSpinner(entries: Array<String>, spinner: AppCompatSpinner) {
         val spinnerArrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
             requireActivity(), R.layout.item_spinner,
             entries

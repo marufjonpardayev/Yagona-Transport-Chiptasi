@@ -21,7 +21,7 @@ class DialogView(private var onEnterClick: ((OneID) -> Unit)) {
         dialog.setCancelable(false)
         dialog.setContentView(binding.root)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog.window!!.setLayout(pxFromDp(activity, 300).toInt(), pxFromDp(activity, 270).toInt())
+        dialog.window!!.setLayout(pxFromDp(activity, 300).toInt(), pxFromDp(activity, 300).toInt())
         dialog.setCancelable(true)
 
         binding.btnEnter.setOnClickListener {
