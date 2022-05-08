@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentSearchBinding
 import uz.transport.yagonatransportchiptasi.ui.activity.CalendarActivity
+import uz.transport.yagonatransportchiptasi.ui.activity.MainActivity
 
 class SearchFragment : Fragment() {
 

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_black"
-    android:paddingTop="24dp"
     tools:context=".ui.fragment.PassengerDetailEntryFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBar"
@@ -32,7 +32,7 @@
                     android:paddingEnd="16dp">
 
                     <ImageView
-                        android:id="@+id/ivBack"
+                        android:id="@+id/ivClose"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_close"
@@ -53,7 +53,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/ivBack"
+                        app:layout_constraintStart_toEndOf="@id/ivClose"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -62,105 +62,223 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <Button
-            android:id="@+id/btnRegisterOneId"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/button_gradient"
-            android:text="OneID orqali ro'yxatdan o'tish"
-            android:textAllCaps="false"
-            android:textSize="20sp"
+            android:layout_marginBottom="78dp"
+            android:paddingTop="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appBar" />
+            app:layout_constraintTop_toBottomOf="@id/appBar">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="18dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/rounded_view"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnRegisterOneId">
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yo'lovchi"
-                android:textAlignment="center"
-                android:textColor="@color/center_color"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/edtSurname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/black"
-                android:hint="Familya"
-                android:inputType="text"
-                android:lines="1"
-                android:paddingHorizontal="12dp"
-                android:textColor="@color/darker_grey"
-                android:textColorHint="@color/grey"
-                android:textSize="20sp" />
+                <Button
+                    android:id="@+id/btnRegisterOneId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_gradient"
+                    android:text="OneID orqali ro'yxatdan o'tish"
+                    android:textAllCaps="false"
+                    android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/edtName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:backgroundTint="@color/black"
-                android:hint="Ism"
-                android:inputType="text"
-                android:lines="1"
-                android:paddingHorizontal="12dp"
-                android:textColor="@color/darker_grey"
-                android:textColorHint="@color/grey"
-                android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/rounded_view"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
-            <EditText
-                android:id="@+id/edtMiddleName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:backgroundTint="@color/black"
-                android:hint="Sharifi"
-                android:inputType="text"
-                android:lines="1"
-                android:paddingHorizontal="12dp"
-                android:textColor="@color/darker_grey"
-                android:textColorHint="@color/grey"
-                android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yo'lovchi"
+                        android:textAlignment="center"
+                        android:textColor="@color/center_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edtBirthDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:backgroundTint="@color/black"
-                android:cursorVisible="false"
-                android:editable="false"
-                android:focusable="false"
-                android:hint="Tug'ilgan sana"
-                android:inputType="date"
-                android:lines="1"
-                android:paddingHorizontal="12dp"
-                android:textColor="@color/darker_grey"
-                android:textColorHint="@color/grey"
-                android:textSize="20sp" />
+                    <EditText
+                        android:id="@+id/edtSurname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/black"
+                        android:hint="Familya"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingHorizontal="12dp"
+                        android:textColor="@color/darker_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:backgroundTint="@color/black"
+                        android:hint="Ism"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingHorizontal="12dp"
+                        android:textColor="@color/darker_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edtMiddleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:backgroundTint="@color/black"
+                        android:hint="Sharifi"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingHorizontal="12dp"
+                        android:textColor="@color/darker_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edtBirthDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:backgroundTint="@color/black"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Tug'ilgan sana"
+                        android:inputType="date"
+                        android:lines="1"
+                        android:paddingHorizontal="12dp"
+                        android:textColor="@color/darker_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+
+                        <RadioButton
+                            android:id="@+id/rbMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Erkak"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:theme="@style/WhiteCheck" />
+
+                        <RadioButton
+                            android:id="@+id/rbFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ayol"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:theme="@style/WhiteCheck" />
+
+                    </RadioGroup>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerDocumentType"
+                        style="@style/Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:backgroundTint="@color/black"
+                        android:paddingTop="4dp"
+                        android:popupBackground="@color/white"
+                        android:popupTheme="@style/Spinner" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edtDocumentNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:backgroundTint="@color/black"
+                        android:hint="Hujjat raqami"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingHorizontal="11dp"
+                        android:textColor="@color/darker_grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerCountry"
+                        style="@style/Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/black"
+                        android:popupBackground="@color/white"
+                        android:popupTheme="@style/Spinner" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/black" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerCity"
+                        style="@style/Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/black"
+                        android:popupBackground="@color/white"
+                        android:popupTheme="@style/Spinner" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/black" />
 
 
-        </LinearLayout>
+                    <Button
+                        android:id="@+id/btnAddPassenger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="36dp"
+                        android:background="@drawable/rounded_view_green"
+                        android:text="Qo'shish"
+                        android:textAllCaps="false"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="270dp"
+    android:background="@drawable/rounded_view"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textColorHint="@color/darker_grey"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/darker_grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvOneIDLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Loginni kiriting"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColorHint="@color/darker_grey"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/darker_grey"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/darker_grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvOneIDPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Parolni kiriting"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_gradient"
+        android:text="Kirish" />
+
+</LinearLayout>

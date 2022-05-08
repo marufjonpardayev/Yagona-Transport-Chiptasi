@@ -28,4 +28,8 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavigationView.setupWithNavController(navController)
     }
+
+    fun setBottomNavigationVisibility(visibility: Int) {
+        binding.bottomNavigationView.visibility = visibility
+    }
 }

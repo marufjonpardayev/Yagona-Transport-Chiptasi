@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.YagonaTransportChiptasi" parent="Theme.MaterialComponents.NoActionBar.Bridge">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -22,5 +22,10 @@
 
     <style name="circle">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Spinner" parent="">
+        <item name="android:textColor">@color/darker_grey</item>
+        <item name="android:textSize">18sp</item>
     </style>
 </resources>

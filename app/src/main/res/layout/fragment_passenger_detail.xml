@@ -60,6 +60,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="54dp"
         android:id="@+id/rvPassengerDetail"
+        android:overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

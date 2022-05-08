@@ -11,12 +11,13 @@ import uz.transport.yagonatransportchiptasi.databinding.FragmentTrainDetailsBind
 import uz.transport.yagonatransportchiptasi.model.Train
 
 class TrainDetailsFragment : Fragment() {
-    lateinit var binding: FragmentTrainDetailsBinding
+
+    private lateinit var binding: FragmentTrainDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View{
+    ): View {
         return inflater.inflate(R.layout.fragment_train_details, container, false)
     }
 
@@ -29,11 +30,10 @@ class TrainDetailsFragment : Fragment() {
 
 
     private fun initViews() {
-        refrshAdapter(allTrains())
-
+        refreshAdapter(allTrains())
     }
 
-    private fun refrshAdapter(items: ArrayList<Train>) {
+    private fun refreshAdapter(items: ArrayList<Train>) {
         val adapter = TrainAdapter(this, items)
         binding.recyclerView.adapter = adapter
     }
@@ -53,8 +53,7 @@ class TrainDetailsFragment : Fragment() {
         return items
     }
 
-    fun openTicket(type: Int){
+    fun openTicket(type: Int) {
 
     }
-
 }

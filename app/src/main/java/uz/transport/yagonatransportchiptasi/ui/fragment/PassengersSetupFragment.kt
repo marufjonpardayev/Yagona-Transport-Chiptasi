@@ -8,18 +8,12 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupBinding
+import uz.transport.yagonatransportchiptasi.ui.activity.MainActivity
 
 
 class PassengersSetupFragment : Fragment() {
 
     private lateinit var binding: FragmentPassengersSetupBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        //dark colored status bar text
-        requireActivity().window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -51,4 +51,8 @@
         android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengerDetailEntryFragment"
         android:label="fragment_passenger_detail_entry"
         tools:layout="@layout/fragment_passenger_detail_entry" />
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.BaseFragment"
+        android:label="BaseFragment" />
 </navigation>

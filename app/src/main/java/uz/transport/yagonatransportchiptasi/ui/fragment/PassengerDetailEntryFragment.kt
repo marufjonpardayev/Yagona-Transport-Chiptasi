@@ -8,10 +8,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Toast
+import androidx.appcompat.widget.AppCompatSpinner
 import androidx.fragment.app.Fragment
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengerDetailEntryBinding
-import uz.transport.yagonatransportchiptasi.ui.activity.MainActivity
+import uz.transport.yagonatransportchiptasi.utils.DialogView
 import java.util.*
 
 
@@ -36,7 +39,33 @@ class PassengerDetailEntryFragment : Fragment() {
             edtBirthDate.setOnClickListener {
                 showCalendarDialog()
             }
+
+            btnRegisterOneId.setOnClickListener {
+                showOneIDLoginDialog()
+            }
         }
+
+        val resources = requireActivity().resources
+        setAdapterToSpinnerDocType(
+            resources.getStringArray(R.array.documents),
+            binding.spinnerDocumentType
+        )
+        setAdapterToSpinnerDocType(
+            resources.getStringArray(R.array.countries),
+            binding.spinnerCountry
+        )
+        setAdapterToSpinnerDocType(resources.getStringArray(R.array.regions), binding.spinnerCity)
+    }
+
+    //setting adapter to any spinner
+    private fun setAdapterToSpinnerDocType(entries: Array<String>, spinner: AppCompatSpinner) {
+        val spinnerArrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
+            requireActivity(), R.layout.item_spinner,
+            entries
+        )
+
+        spinnerArrayAdapter.setDropDownViewResource(R.layout.item_spinner)
+        spinner.adapter = spinnerArrayAdapter
     }
 
     private fun showCalendarDialog() {
@@ -49,9 +78,7 @@ class PassengerDetailEntryFragment : Fragment() {
             requireActivity(),
             android.R.style.Theme_Holo_Light_Dialog_MinWidth,
             mDateSetListener,
-            year,
-            month,
-            day
+            year, month, day
         )
 
         datePickerDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -65,5 +92,13 @@ class PassengerDetailEntryFragment : Fragment() {
             val date = "$day/${month + 1}/$year"
             binding.edtBirthDate.setText(date)
         }
+    }
+
+    private fun showOneIDLoginDialog() {
+        val dialogView = DialogView { oneID ->
+            //send request to server to get data combined with oneID
+        }
+
+        dialogView.showOneIDLoginDialog(requireActivity())
     }
 }
