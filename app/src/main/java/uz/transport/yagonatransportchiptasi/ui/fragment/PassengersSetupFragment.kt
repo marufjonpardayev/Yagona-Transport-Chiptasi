@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupBinding
@@ -13,11 +13,13 @@ import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTextColo
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.decreaseValue
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.increaseValue
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.selectOneAtLeast
+import uz.transport.yagonatransportchiptasi.model.PassengerStatus
 
 
 class PassengersSetupFragment : Fragment() {
 
     private lateinit var binding: FragmentPassengersSetupBinding
+    private var passengers: ArrayList<PassengerStatus> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +36,8 @@ class PassengersSetupFragment : Fragment() {
 
         binding.apply {
             btnNext.setOnClickListener {
+                passengers.clear()
+                addPassengersToList()
                 openPassengerDetailFragment()
             }
 
@@ -87,7 +91,28 @@ class PassengersSetupFragment : Fragment() {
         }
     }
 
+    private fun addPassengersToList() {
+        val adultsNumber = binding.tvAdultsNumber.text.toString().toInt()
+        val childrenNumber = binding.tvChildrenNumber.text.toString().toInt()
+        val infantNumber = binding.tvInfantsNumber.text.toString().toInt()
+
+        for (i in 0 until adultsNumber) {
+            passengers.add(PassengerStatus(32, "pastki", "Voyaga yetgan"))
+        }
+
+        for (i in 0 until childrenNumber) {
+            passengers.add(PassengerStatus(35, "ustki", "Bola"))
+        }
+
+        for (i in 0 until infantNumber) {
+            passengers.add(PassengerStatus(0, null, "Infant"))
+        }
+    }
+
     private fun openPassengerDetailFragment() {
-        findNavController().navigate(R.id.action_passengersSetupFragment_to_passengerDetailFragment)
+        findNavController().navigate(
+            R.id.action_passengersSetupFragment_to_passengerDetailFragment,
+            bundleOf("passengers" to passengers)
+        )
     }
 }

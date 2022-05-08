@@ -10,6 +10,16 @@
     android:paddingHorizontal="14dp"
     android:paddingVertical="16dp">
 
+    <ImageView
+        android:id="@+id/ivInfant"
+        android:layout_width="64dp"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_infant"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvPlaceNumber"
         android:layout_width="wrap_content"
@@ -47,14 +57,66 @@
         android:id="@+id/vwLine"
         android:layout_width="match_parent"
         android:layout_height="0.3dp"
-        android:background="@color/light_grey"
         android:layout_marginTop="4dp"
+        android:background="@color/light_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFullData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vwLine">
+
+        <TextView
+            android:id="@+id/tvFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFullData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/darker_grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFullname" />
+
+        <TextView
+            android:id="@+id/tvChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_gradient"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="Tanlang"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFullData" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -74,10 +136,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="Yo'lovchini tanlash"
+            android:text="Ma'lumotlarini kiritish"
             android:textColor="#3C3C3C"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"

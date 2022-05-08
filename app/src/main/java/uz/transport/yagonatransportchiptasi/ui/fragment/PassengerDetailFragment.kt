@@ -5,17 +5,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.PassengerDetailAdapter
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengerDetailBinding
-import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupBinding
+import uz.transport.yagonatransportchiptasi.model.PassengerDetail
 import uz.transport.yagonatransportchiptasi.model.PassengerStatus
 
 class PassengerDetailFragment : Fragment() {
 
-    lateinit var passengerDetailAdapter: PassengerDetailAdapter
-    lateinit var binding: FragmentPassengerDetailBinding
+    private lateinit var passengerDetailAdapter: PassengerDetailAdapter
+    private lateinit var binding: FragmentPassengerDetailBinding
+    private lateinit var passengers: ArrayList<PassengerStatus>
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        if (arguments?.get("passengers") != null) {
+            passengers = arguments?.get("passengers") as ArrayList<PassengerStatus>
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,26 +44,23 @@ class PassengerDetailFragment : Fragment() {
     }
 
     private fun initViews() {
-        passengerDetailAdapter = PassengerDetailAdapter{
+        passengerDetailAdapter = PassengerDetailAdapter { position ->
             openDetailEntryFragment()
         }
-        refreshAdapter(getPassengers())
+        refreshAdapter(passengers)
     }
 
     private fun openDetailEntryFragment() {
-        findNavController().navigate(R.id.action_passengerDetailFragment_to_passengerDetailEntryFragment)
+        findNavController().navigate(
+            R.id.action_passengerDetailFragment_to_passengerDetailEntryFragment,
+            bundleOf(
+                "passengers" to passengers
+            )
+        )
     }
 
-    private fun refreshAdapter(passengers: java.util.ArrayList<PassengerStatus>) {
+    private fun refreshAdapter(passengers: ArrayList<PassengerStatus>) {
         passengerDetailAdapter.submitData(passengers)
         binding.rvPassengerDetail.adapter = passengerDetailAdapter
-    }
-
-    private fun getPassengers(): ArrayList<PassengerStatus> {
-        return ArrayList<PassengerStatus>().apply {
-            this.add(PassengerStatus(12, "Yuqori", "Voyaga yetgan"))
-            this.add(PassengerStatus(42, "Past", "Voyaga yetgan"))
-            this.add(PassengerStatus(10, "Yuqori", "Voyaga yetgan"))
-        }
     }
 }
