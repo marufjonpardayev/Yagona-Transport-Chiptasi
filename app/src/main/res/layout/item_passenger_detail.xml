@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,51 +7,57 @@
     android:layout_marginTop="12dp"
     android:background="@drawable/rounded_view"
     android:elevation="3dp"
+    android:orientation="vertical"
     android:paddingHorizontal="14dp"
     android:paddingVertical="16dp">
 
-    <ImageView
-        android:id="@+id/ivInfant"
-        android:layout_width="64dp"
-        android:layout_height="46dp"
-        android:background="@color/white"
-        android:src="@drawable/ic_infant"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvPlaceNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Joy 42"
-        android:textColor="#323232"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/ivInfant"
+            android:layout_width="64dp"
+            android:layout_height="46dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_infant"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvUpOrDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Yuqori"
-        android:textColor="@color/grey"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/vwLine"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPlaceNumber" />
+        <TextView
+            android:id="@+id/tvPlaceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joy 42"
+            android:textColor="#323232"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Voyaga yetmagan"
-        android:textColor="#3C3C3C"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvUpOrDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Yuqori"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPlaceNumber" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voyaga yetmagan"
+            android:textColor="#3C3C3C"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
         android:id="@+id/vwLine"
@@ -59,11 +65,9 @@
         android:layout_height="0.3dp"
         android:layout_marginTop="4dp"
         android:background="@color/light_grey"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/tvUpOrDown" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clFullData"
@@ -107,7 +111,7 @@
             android:background="@drawable/button_gradient"
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
-            android:text="Tanlang"
+            android:text="O'zgartirish"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -121,6 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -161,4 +166,4 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

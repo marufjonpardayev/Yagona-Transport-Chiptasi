@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_black"
-    tools:context=".ui.fragment.PassengerDetailEntryFragment">
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="24dp">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBar"
@@ -260,9 +260,9 @@
                         android:background="@color/black" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:gravity="center_vertical">
 
                         <CheckBox
@@ -285,11 +285,11 @@
                             android:backgroundTint="@color/black"
                             android:popupBackground="@color/white"
                             android:popupTheme="@style/Spinner"
-                            app:layout_constraintStart_toEndOf="@id/checkboxPrivilege"
-                            app:layout_constraintEnd_toEndOf="parent"
                             android:visibility="gone"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/checkboxPrivilege"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

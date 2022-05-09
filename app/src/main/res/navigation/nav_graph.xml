@@ -35,24 +35,15 @@
         tools:layout="@layout/fragment_passengers_setup" >
         <action
             android:id="@+id/action_passengersSetupFragment_to_passengerDetailFragment"
-            app:destination="@id/passengerDetailFragment" />
+            app:destination="@id/passengerDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/passengerDetailFragment"
         android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengerDetailFragment"
         android:label="fragment_passenger_detail"
-        tools:layout="@layout/fragment_passenger_detail" >
-        <action
-            android:id="@+id/action_passengerDetailFragment_to_passengerDetailEntryFragment"
-            app:destination="@id/passengerDetailEntryFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/passengerDetailEntryFragment"
-        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengerDetailEntryFragment"
-        android:label="fragment_passenger_detail_entry"
-        tools:layout="@layout/fragment_passenger_detail_entry" >
-        <action
-            android:id="@+id/action_passengerDetailEntryFragment_to_passengerDetailFragment"
-            app:destination="@id/passengerDetailFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_passenger_detail" />
 </navigation>

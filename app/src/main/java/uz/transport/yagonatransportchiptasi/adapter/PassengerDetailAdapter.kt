@@ -12,6 +12,7 @@ class PassengerDetailAdapter(private var onItemClicked: ((Int) -> Unit)) :
     RecyclerView.Adapter<PassengerDetailAdapter.VH>() {
 
     private val passengers: ArrayList<PassengerStatus> = ArrayList()
+    private val passengerDetails: ArrayList<PassengerDetail?> = ArrayList()
 
     inner class VH(val binding: ItemPassengerDetailBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -32,15 +33,36 @@ class PassengerDetailAdapter(private var onItemClicked: ((Int) -> Unit)) :
                 tvPlaceNumber.text = "Joy ${passengerStatus.placeNumber}"
                 tvUpOrDown.text = passengerStatus.upOrDown
                 tvStatus.text = passengerStatus.status
+
+                checkIfDetailsEntered(holder.binding, position)
+
             } else {
                 ivInfant.visibility = View.VISIBLE
                 tvPlaceNumber.visibility = View.GONE
                 tvUpOrDown.visibility = View.GONE
+
+                checkIfDetailsEntered(holder.binding, position)
             }
             tvChoose.setOnClickListener {
                 onItemClicked.invoke(position)
             }
+        }
+    }
 
+    private fun checkIfDetailsEntered(binding: ItemPassengerDetailBinding, position: Int) {
+        binding.apply {
+            if (passengerDetails.isNotEmpty()) {
+                if (passengerDetails[position] != null) {
+                    val passengerDetail = passengerDetails[position]
+                    clBottom.visibility = View.GONE
+                    clFullData.visibility = View.VISIBLE
+
+                    tvFullname.text =
+                        "${passengerDetail!!.surname} ${passengerDetail.name} ${passengerDetail.middleName}"
+                    tvFullData.text =
+                        "Jinsi: ${passengerDetail.gender}, Tug'ilgan sana: ${passengerDetail.dateOfBirth},\nHujjat: ${passengerDetail.documentNumber}"
+                }
+            }
         }
     }
 
@@ -50,5 +72,13 @@ class PassengerDetailAdapter(private var onItemClicked: ((Int) -> Unit)) :
         list: ArrayList<PassengerStatus>
     ) {
         passengers.addAll(list)
+        for (i in list.indices){
+            passengerDetails.add(null)
+        }
+    }
+
+    fun submitDataToDetails(position: Int, passengerDetail: PassengerDetail) {
+        passengerDetails.add(position, passengerDetail)
+        notifyItemChanged(position)
     }
 }
