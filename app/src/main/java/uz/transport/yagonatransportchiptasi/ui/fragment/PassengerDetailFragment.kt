@@ -10,10 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.widget.AppCompatSpinner
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.PassengerDetailAdapter
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengerDetailBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.isNotEmpty
 import uz.transport.yagonatransportchiptasi.model.PassengerDetail
 import uz.transport.yagonatransportchiptasi.model.PassengerStatus
 import uz.transport.yagonatransportchiptasi.utils.DialogView
@@ -49,7 +51,7 @@ class PassengerDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentPassengerDetailBinding.bind(view)
 
-        bottomSheet = view.findViewById<View>(R.id.bottomSheet)
+        bottomSheet = view.findViewById(R.id.bottomSheet)
 
         initViews()
     }
@@ -68,6 +70,9 @@ class PassengerDetailFragment : Fragment() {
             controlBottomSheetActions(position)
         }
 
+        binding.btnNext.setOnClickListener {
+            findNavController().navigate(R.id.action_passengerDetailFragment_to_paymentFragment)
+        }
 
         refreshAdapter(passengers)
     }
@@ -109,6 +114,7 @@ class PassengerDetailFragment : Fragment() {
             resources.getStringArray(R.array.countries),
             spinnerCountry
         )
+
         setAdapterToSpinner(resources.getStringArray(R.array.regions), spinnerCity)
 
         setAdapterToSpinner(resources.getStringArray(R.array.privileges), spinnerPrivilege)
@@ -123,7 +129,6 @@ class PassengerDetailFragment : Fragment() {
             showOneIDLoginDialog()
         }
 
-
         fun clearEdittextAreas() {
             clearEdittextArea(edtSurname)
             clearEdittextArea(edtName)
@@ -135,6 +140,7 @@ class PassengerDetailFragment : Fragment() {
         }
 
         btnAddPassenger.setOnClickListener {
+
             val surname = edtSurname.text.toString()
             val name = edtName.text.toString()
             val middleName = edtMiddleName.text.toString()
@@ -159,7 +165,6 @@ class PassengerDetailFragment : Fragment() {
             clearEdittextAreas()
             hideBottomSheet()
         }
-
 
         ivClose.setOnClickListener {
             hideBottomSheet()

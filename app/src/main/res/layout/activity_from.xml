@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:paddingTop="28dp"
-    android:paddingHorizontal="16dp"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="28dp"
     tools:context=".ui.activity.FromActivity">
+
     <LinearLayout
-        android:gravity="center_vertical"
-        android:padding="10dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
         <ImageView
-            android:src="@drawable/ic_close"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close" />
+
         <TextView
-            android:fontFamily="@font/font_for_texts"
-            android:layout_marginLeft="4dp"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="@string/qayerdan"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/font_for_texts"
+            android:text="@string/qayerdan"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
     </LinearLayout>
+
     <EditText
-        android:fontFamily="@font/font_for_texts"
-        android:textColor="@color/black"
-        android:backgroundTint="#959A9C"
-        android:layout_marginHorizontal="10dp"
-        android:textColorHint="#9A8E8E"
-        android:hint="@string/stansiyani_kiriting"
+        android:id="@+id/edtFrom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="#959A9C"
+        android:fontFamily="@font/font_for_texts"
+        android:hint="@string/stansiyani_kiriting"
+        android:textColor="@color/black"
+        android:textColorHint="#9A8E8E" />
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="8dp"
         android:id="@+id/rvFrom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
 </LinearLayout>

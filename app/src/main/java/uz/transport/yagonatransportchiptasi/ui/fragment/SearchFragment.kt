@@ -48,13 +48,11 @@ class SearchFragment : Fragment() {
                 changeDestinations()
             }
 
-
             /**
              * this is Select the Departure date from the calendar
              */
             llDeparture.setOnClickListener {
                 openCalendarActivity(1)
-
             }
             /**
              * this is Select the Arrival date from the calendar
@@ -81,8 +79,6 @@ class SearchFragment : Fragment() {
                 openToFragment()
             }
         }
-
-
     }
 
     override fun onResume() {
@@ -121,7 +117,7 @@ class SearchFragment : Fragment() {
     fun giveDate(): String {
         val cal: Calendar = Calendar.getInstance()
         val sdf = SimpleDateFormat("EEE, MMM d")
-        return sdf.format(cal.getTime())
+        return sdf.format(cal.time)
     }
 
     private fun openCalendarActivity(type: Int) {

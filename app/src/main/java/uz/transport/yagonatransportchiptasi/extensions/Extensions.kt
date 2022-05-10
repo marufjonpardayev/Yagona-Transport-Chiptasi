@@ -1,6 +1,7 @@
 package uz.transport.yagonatransportchiptasi.extensions
 
 import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.TextView
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.increaseValue
@@ -28,4 +29,6 @@ object Extensions {
             this.isChecked = true
         }
     }
+
+    fun EditText.isNotEmpty(): Boolean = this.text.isNotEmpty()
 }
