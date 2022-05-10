@@ -126,8 +126,8 @@ class SearchFragment : Fragment() {
 
     private fun openCalendarActivity(type: Int) {
         val intent = Intent(requireContext(), CalendarActivity::class.java)
-        intent.putExtra("locationStart", "Toshkent")
-        intent.putExtra("locationEnd", "Samarqand")
+        intent.putExtra("locationStart", loadData())
+        intent.putExtra("locationEnd", loadData2())
         intent.putExtra("type", "${type}")
         postActivity.launch(intent)
     }
