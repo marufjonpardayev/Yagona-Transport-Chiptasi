@@ -18,7 +18,8 @@
         android:padding="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_close" />
 
@@ -45,7 +46,7 @@
         android:textColorHint="#9A8E8E" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFrom"
+        android:id="@+id/rvTo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

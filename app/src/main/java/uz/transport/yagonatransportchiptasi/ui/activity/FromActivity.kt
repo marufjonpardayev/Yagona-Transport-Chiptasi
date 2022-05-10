@@ -10,28 +10,27 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.FromAdapter
+import uz.transport.yagonatransportchiptasi.databinding.ActivityFromBinding
 import uz.transport.yagonatransportchiptasi.ui.fragment.SearchFragment
 
 class FromActivity : AppCompatActivity() {
+    lateinit var binding: ActivityFromBinding
 
-    lateinit var recyclerFrom: RecyclerView
-    lateinit var edtFrom: EditText
     val fromRegions = ArrayList<String>()
     val items = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_from)
+        binding = ActivityFromBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         initViews()
     }
 
     private fun initViews() {
-        recyclerFrom = findViewById(R.id.rvFrom)
-        edtFrom = findViewById(R.id.edtFrom)
         getRegions()
         refreshAdapter(fromRegions)
 
-        edtFrom.addTextChangedListener(object : TextWatcher {
+        binding.edtFrom.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(
                 s: CharSequence?,
                 start: Int,
@@ -48,6 +47,8 @@ class FromActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
 
         })
+
+        binding.ivClose.setOnClickListener { finish() }
     }
 
     private fun regionsByKeyWord(keyWord: String) {
@@ -83,7 +84,7 @@ class FromActivity : AppCompatActivity() {
 
     private fun refreshAdapter(regions: ArrayList<String>) {
         val adapter = FromAdapter(regions)
-        recyclerFrom.adapter = adapter
+        binding.rvFrom.adapter = adapter
         adapter.setOnItemClickListener(object : FromAdapter.RecyclerClickListener {
             override fun onClick(position: Int) {
                 saveData(regions[position])
