@@ -449,12 +449,12 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
 
                     <TextView
-
                         android:layout_width="15dp"
                         android:layout_height="17dp"
                         android:layout_marginLeft="27dp"
@@ -471,12 +471,12 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
 
                     <TextView
-
                         android:layout_width="15dp"
                         android:layout_height="17dp"
                         android:layout_marginLeft="27dp"
@@ -493,6 +493,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -514,6 +515,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -536,6 +538,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -558,6 +561,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -580,12 +584,12 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
 
                     <TextView
-
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="22dp"
@@ -602,6 +606,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -624,6 +629,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -646,28 +652,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/space_one" />
-
-                    <TextView
-
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="22dp"
-                        android:layout_marginTop="25dp"
-                        android:text="19"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="713dp"
-                    android:layout_marginTop="10dp">
-
-                    <ImageView
+                        android:id="@+id/ivSeat19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -690,6 +675,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat21"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -712,6 +698,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat23"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -734,6 +721,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat25"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -756,6 +744,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -778,6 +767,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat29"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -800,6 +790,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -822,6 +813,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -844,6 +836,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat35"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -866,12 +859,12 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat37"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
 
                     <TextView
-
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="22dp"
@@ -888,12 +881,12 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat39"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
 
                     <TextView
-
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="22dp"
@@ -910,6 +903,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat41"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -932,6 +926,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat43"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -954,6 +949,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat45"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -976,6 +972,7 @@
                     android:layout_marginTop="10dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat47"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -999,6 +996,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1021,6 +1019,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1043,6 +1042,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1064,6 +1064,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1086,6 +1087,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1108,6 +1110,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1130,6 +1133,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1152,6 +1156,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1174,6 +1179,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1196,6 +1202,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1214,32 +1221,11 @@
                 <FrameLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginLeft="713dp"
-                    android:layout_marginTop="10dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/space_one" />
-
-                    <TextView
-
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="22dp"
-                        android:layout_marginTop="25dp"
-                        android:text="19"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
                     android:layout_marginLeft="763dp"
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1262,6 +1248,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1284,6 +1271,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat26"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1306,6 +1294,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat28"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1328,6 +1317,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat30"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1350,6 +1340,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1372,6 +1363,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1394,6 +1386,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat36"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1416,6 +1409,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat38"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1438,6 +1432,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat40"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1460,6 +1455,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat42"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1482,6 +1478,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat44"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1504,6 +1501,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat46"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />
@@ -1526,6 +1524,7 @@
                     android:layout_marginTop="75dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat48"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_one" />

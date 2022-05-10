@@ -59,4 +59,6 @@ dependencies {
 
     //https://github.com/CleverPumpkin/CrunchyCalendar
     implementation 'ru.cleverpumpkin:crunchycalendar:2.2.0'
+
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 }

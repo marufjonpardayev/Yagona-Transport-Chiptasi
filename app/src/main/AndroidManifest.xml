@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YagonaTransportChiptasi">
         <activity
+            android:name=".ui.activity.TicketActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.ToActivity"
             android:exported="false" />
         <activity
