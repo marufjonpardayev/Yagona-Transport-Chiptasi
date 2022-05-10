@@ -24,7 +24,6 @@ class ToActivity : AppCompatActivity() {
         initViews()
     }
 
-
     private fun initViews() {
         recyclerFrom = findViewById(R.id.rvFrom)
         edtTo = findViewById(R.id.edtTo)
@@ -64,7 +63,7 @@ class ToActivity : AppCompatActivity() {
     }
 
     private fun getRegions() {
-        toRegions.add("Tashkent")
+        toRegions.add("Toshkent")
         toRegions.add("Samarqand")
         toRegions.add("Sirdaryo")
         toRegions.add("Buxoro")

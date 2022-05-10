@@ -15,6 +15,7 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentSearchBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.isNotEmpty
 import uz.transport.yagonatransportchiptasi.ui.activity.CalendarActivity
 import uz.transport.yagonatransportchiptasi.ui.activity.FromActivity
 import uz.transport.yagonatransportchiptasi.ui.activity.ToActivity
@@ -38,7 +39,6 @@ class SearchFragment : Fragment() {
         binding = FragmentSearchBinding.bind(view)
         initViews()
     }
-
 
 
     private fun initViews() {
@@ -83,18 +83,21 @@ class SearchFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        binding.tvFrom.text=loadData()
-        binding.tvTo.text=loadData2()
+        binding.tvFrom.text = loadData()
+        binding.tvTo.text = loadData2()
     }
 
-    private fun loadData():String{
-        val sharedPreferences=requireContext().getSharedPreferences("shared",Context.MODE_PRIVATE)
-        val savedString=sharedPreferences.getString("region","Qayerdan?")
+    private fun loadData(): String {
+        val sharedPreferences =
+            requireContext().getSharedPreferences("shared", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString("region", "Qayerdan?")
         return savedString!!
     }
-    private fun loadData2():String{
-        val sharedPreferences=requireContext().getSharedPreferences("shared",Context.MODE_PRIVATE)
-        val savedString=sharedPreferences.getString("regionto","Qayerga?")
+
+    private fun loadData2(): String {
+        val sharedPreferences =
+            requireContext().getSharedPreferences("shared", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString("regionto", "Qayerga?")
         return savedString!!
     }
 
@@ -102,14 +105,16 @@ class SearchFragment : Fragment() {
     private fun openPassengerSetupFragment() {
         findNavController().navigate(R.id.action_searchFragment_to_passengersSetupFragment)
     }
+
     private fun openFromFragment() {
-       // findNavController().navigate(R.id.action_searchFragment_to_fromFragment2)
-        val intent=Intent(requireContext(),FromActivity::class.java)
+        // findNavController().navigate(R.id.action_searchFragment_to_fromFragment2)
+        val intent = Intent(requireContext(), FromActivity::class.java)
         startActivity(intent)
     }
+
     private fun openToFragment() {
         //findNavController().navigate(R.id.action_searchFragment_to_toFragment)
-        val intent=Intent(requireContext(),ToActivity::class.java)
+        val intent = Intent(requireContext(), ToActivity::class.java)
         startActivity(intent)
     }
 
@@ -121,16 +126,19 @@ class SearchFragment : Fragment() {
     }
 
     private fun openCalendarActivity(type: Int) {
-        val intent = Intent(requireContext(), CalendarActivity::class.java)
-        intent.putExtra("locationStart", "Toshkent")
-        intent.putExtra("locationEnd", "Samarqand")
-        intent.putExtra("type", "${type}")
-        postActivity.launch(intent)
+        if (binding.tvFrom.isNotEmpty() && binding.tvTo.isNotEmpty()) {
+            val intent = Intent(requireContext(), CalendarActivity::class.java)
+            intent.putExtra("locationStart", binding.tvFrom.text.toString())
+            intent.putExtra("locationEnd", binding.tvTo.text.toString())
+            intent.putExtra("type", "$type")
+            postActivity.launch(intent)
+        }
     }
 
     @SuppressLint("SimpleDateFormat")
-    var postActivity=registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()) { result ->
+    var postActivity = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data = result.data
             val day = data!!.getStringExtra("day")!!.toInt()

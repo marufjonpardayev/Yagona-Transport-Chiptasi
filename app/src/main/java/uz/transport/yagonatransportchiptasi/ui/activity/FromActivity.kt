@@ -50,7 +50,7 @@ class FromActivity : AppCompatActivity() {
     }
 
     private fun getRegions() {
-        fromRegions.add("Tashkent")
+        fromRegions.add("Toshkent")
         fromRegions.add("Samarqand")
         fromRegions.add("Sirdaryo")
         fromRegions.add("Buxoro")

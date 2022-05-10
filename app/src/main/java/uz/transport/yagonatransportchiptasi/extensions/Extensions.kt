@@ -31,4 +31,5 @@ object Extensions {
     }
 
     fun EditText.isNotEmpty(): Boolean = this.text.isNotEmpty()
+    fun TextView.isNotEmpty(): Boolean = this.text.isNotEmpty()
 }
