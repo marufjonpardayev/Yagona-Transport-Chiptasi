@@ -40,7 +40,6 @@ class SearchFragment : Fragment() {
     }
 
 
-
     private fun initViews() {
 
         binding.apply {
@@ -65,9 +64,12 @@ class SearchFragment : Fragment() {
 
             tvDeparture.text = giveDate()
 
-            //openn
             btnSearch.setOnClickListener {
-                openPassengerSetupFragment()
+                if (tvFrom.text.toString().trim().lowercase() == "moskva") {
+                    openWaytoGoFragment()
+                } else {
+                    openPassengerSetupFragment()
+                }
             }
 
             ivClose.setOnClickListener {
@@ -81,24 +83,29 @@ class SearchFragment : Fragment() {
                 openToFragment()
             }
         }
+    }
 
-
+    private fun openWaytoGoFragment() {
+        findNavController().navigate(R.id.action_searchFragment_to_waytoGoFragment)
     }
 
     override fun onResume() {
         super.onResume()
-        binding.tvFrom.text=loadData()
-        binding.tvTo.text=loadData2()
+        binding.tvFrom.text = loadData()
+        binding.tvTo.text = loadData2()
     }
 
-    private fun loadData():String{
-        val sharedPreferences=requireContext().getSharedPreferences("shared",Context.MODE_PRIVATE)
-        val savedString=sharedPreferences.getString("region","Qayerdan?")
+    private fun loadData(): String {
+        val sharedPreferences =
+            requireContext().getSharedPreferences("shared", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString("region", "Qayerdan?")
         return savedString!!
     }
-    private fun loadData2():String{
-        val sharedPreferences=requireContext().getSharedPreferences("shared",Context.MODE_PRIVATE)
-        val savedString=sharedPreferences.getString("regionto","Qayerga?")
+
+    private fun loadData2(): String {
+        val sharedPreferences =
+            requireContext().getSharedPreferences("shared", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString("regionto", "Qayerga?")
         return savedString!!
     }
 
@@ -106,14 +113,16 @@ class SearchFragment : Fragment() {
     private fun openPassengerSetupFragment() {
         findNavController().navigate(R.id.action_searchFragment_to_passengersSetupFragment)
     }
+
     private fun openFromFragment() {
-       // findNavController().navigate(R.id.action_searchFragment_to_fromFragment2)
-        val intent=Intent(requireContext(),FromActivity::class.java)
+        // findNavController().navigate(R.id.action_searchFragment_to_fromFragment2)
+        val intent = Intent(requireContext(), FromActivity::class.java)
         startActivity(intent)
     }
+
     private fun openToFragment() {
         //findNavController().navigate(R.id.action_searchFragment_to_toFragment)
-        val intent=Intent(requireContext(),ToActivity::class.java)
+        val intent = Intent(requireContext(), ToActivity::class.java)
         startActivity(intent)
     }
 
@@ -133,8 +142,9 @@ class SearchFragment : Fragment() {
     }
 
     @SuppressLint("SimpleDateFormat")
-    var postActivity=registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()) { result ->
+    var postActivity = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data = result.data
             val day = data!!.getStringExtra("day")!!.toInt()

@@ -35,7 +35,7 @@ class PaymentFragment : Fragment() {
     }
 
     private fun openTicketActivity() {
-        val intent = Intent(requireActivity(),TicketActivity::class.java)
+        val intent = Intent(requireActivity(), TicketActivity::class.java)
         startActivity(intent)
     }
 }
