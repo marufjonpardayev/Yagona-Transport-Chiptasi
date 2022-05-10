@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YagonaTransportChiptasi">
         <activity
-            android:name="uz.transport.yagonatransportchiptasi.ui.activity.CalendarActivity"
+            android:name=".ui.activity.ToActivity"
             android:exported="false" />
         <activity
-            android:name="uz.transport.yagonatransportchiptasi.ui.activity.MainActivity"
+            android:name=".ui.activity.FromActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -23,4 +29,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

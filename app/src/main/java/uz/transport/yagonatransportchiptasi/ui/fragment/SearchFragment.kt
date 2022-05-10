@@ -2,18 +2,22 @@ package uz.transport.yagonatransportchiptasi.ui.fragment
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentSearchBinding
 import uz.transport.yagonatransportchiptasi.ui.activity.CalendarActivity
+import uz.transport.yagonatransportchiptasi.ui.activity.FromActivity
+import uz.transport.yagonatransportchiptasi.ui.activity.ToActivity
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -32,11 +36,13 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSearchBinding.bind(view)
-
         initViews()
     }
 
+
+
     private fun initViews() {
+
         binding.apply {
             ivChange.setOnClickListener {
                 changeDestinations()
@@ -68,12 +74,47 @@ class SearchFragment : Fragment() {
                 tvArrival.text = "Orqaga"
                 ivClose.visibility = View.GONE
             }
+            tvFrom.setOnClickListener {
+                openFromFragment()
+            }
+            tvTo.setOnClickListener {
+                openToFragment()
+            }
         }
+
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.tvFrom.text=loadData()
+        binding.tvTo.text=loadData2()
+    }
+
+    private fun loadData():String{
+        val sharedPreferences=requireContext().getSharedPreferences("shared",Context.MODE_PRIVATE)
+        val savedString=sharedPreferences.getString("region","Qayerdan?")
+        return savedString!!
+    }
+    private fun loadData2():String{
+        val sharedPreferences=requireContext().getSharedPreferences("shared",Context.MODE_PRIVATE)
+        val savedString=sharedPreferences.getString("regionto","Qayerga?")
+        return savedString!!
     }
 
 
     private fun openPassengerSetupFragment() {
         findNavController().navigate(R.id.action_searchFragment_to_passengersSetupFragment)
+    }
+    private fun openFromFragment() {
+       // findNavController().navigate(R.id.action_searchFragment_to_fromFragment2)
+        val intent=Intent(requireContext(),FromActivity::class.java)
+        startActivity(intent)
+    }
+    private fun openToFragment() {
+        //findNavController().navigate(R.id.action_searchFragment_to_toFragment)
+        val intent=Intent(requireContext(),ToActivity::class.java)
+        startActivity(intent)
     }
 
     @SuppressLint("SimpleDateFormat")
