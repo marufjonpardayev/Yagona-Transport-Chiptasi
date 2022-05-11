@@ -71,7 +71,7 @@ class PassengerDetailFragment : Fragment() {
         }
 
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_passengerDetailFragment_to_paymentFragment)
+            findNavController().navigate(R.id.action_passengerDetailFragment_to_paymentTypeFragment)
         }
 
         refreshAdapter(passengers)

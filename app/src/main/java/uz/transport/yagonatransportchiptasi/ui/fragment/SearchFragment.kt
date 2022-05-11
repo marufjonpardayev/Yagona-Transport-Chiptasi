@@ -118,7 +118,7 @@ class SearchFragment : Fragment() {
 
 
     private fun openPassengerSetupFragment() {
-        findNavController().navigate(R.id.action_searchFragment_to_passengersSetupFragment)
+        findNavController().navigate(R.id.action_searchFragment_to_allTransportFragment)
     }
 
     private fun openFromFragment() {

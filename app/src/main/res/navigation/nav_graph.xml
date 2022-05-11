@@ -19,14 +19,14 @@
         android:id="@+id/searchFragment"
         android:name="uz.transport.yagonatransportchiptasi.ui.fragment.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" >
+        tools:layout="@layout/fragment_search">
         <action
-            android:id="@+id/action_searchFragment_to_passengersSetupFragment"
-            app:destination="@id/passengersSetupFragment"
+            android:id="@+id/action_searchFragment_to_allTransportFragment"
+            app:destination="@id/allTransportFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_searchFragment_to_waytoGoFragment"
             app:destination="@id/waytoGoFragment"
@@ -39,27 +39,27 @@
         android:id="@+id/passengersSetupFragment"
         android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengersSetupFragment"
         android:label="fragment_passengers_setup"
-        tools:layout="@layout/fragment_passengers_setup" >
+        tools:layout="@layout/fragment_passengers_setup">
         <action
             android:id="@+id/action_passengersSetupFragment_to_passengerDetailFragment"
             app:destination="@id/passengerDetailFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/passengerDetailFragment"
         android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PassengerDetailFragment"
         android:label="fragment_passenger_detail"
-        tools:layout="@layout/fragment_passenger_detail" >
+        tools:layout="@layout/fragment_passenger_detail">
         <action
-            android:id="@+id/action_passengerDetailFragment_to_paymentFragment"
-            app:destination="@id/paymentFragment"
+            android:id="@+id/action_passengerDetailFragment_to_paymentTypeFragment"
+            app:destination="@id/paymentTypeFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
@@ -70,4 +70,18 @@
         android:id="@+id/waytoGoFragment"
         android:name="uz.transport.yagonatransportchiptasi.ui.fragment.WaytoGoFragment"
         android:label="WaytoGoFragment" />
+    <fragment
+        android:id="@+id/allTransportFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.AllTransportFragment"
+        android:label="fragment_all_transport"
+        tools:layout="@layout/fragment_all_transport" />
+    <fragment
+        android:id="@+id/paymentTypeFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PaymentTypeFragment"
+        android:label="fragment_payment_type"
+        tools:layout="@layout/fragment_payment_type">
+        <action
+            android:id="@+id/action_paymentTypeFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
 </navigation>
