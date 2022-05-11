@@ -2,7 +2,6 @@ package uz.transport.yagonatransportchiptasi.ui.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +10,7 @@ import ru.cleverpumpkin.calendar.CalendarDate
 import ru.cleverpumpkin.calendar.CalendarView
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.ActivityCalendarBinding
+import java.time.LocalDate
 import java.util.*
 
 /**
@@ -25,8 +25,6 @@ class CalendarActivity : AppCompatActivity() {
         setContentView(binding.root)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         window.statusBarColor = ContextCompat.getColor(this,R.color.white)
-
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         initViews()
     }
@@ -60,10 +58,11 @@ class CalendarActivity : AppCompatActivity() {
      */
     private fun calendar() {
         val calendar = Calendar.getInstance()
+        val cal = LocalDate.now()
 
-        val month = calendar.get(Calendar.MONTH)
-        val year: Int = calendar.get(Calendar.YEAR)
-        val day: Int = calendar.get(Calendar.DAY_OF_WEEK)
+        val month = cal.month.value-1
+        val year: Int = cal.year
+        val day: Int = cal.dayOfMonth
 
         calendar.set(year, month, day)
         val initialDate = CalendarDate(calendar.time)
