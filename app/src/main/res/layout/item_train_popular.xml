@@ -3,9 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/item_oval"
-    android:layout_margin="10dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
+    android:padding="10dp"
+    android:layout_marginTop="8dp"
     android:orientation="vertical"
     android:id="@+id/ll_popular">
 
@@ -27,12 +26,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="18:52"
+                android:text="17:52"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tv_from"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TOSHKENT"
@@ -56,9 +56,10 @@
                 android:layout_weight="1"/>
 
             <TextView
+                android:textColor="@color/darker_grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="05:26"
+                android:text="06:10"
                 android:textSize="12sp"/>
 
             <ImageView
@@ -86,12 +87,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00:18"
+                android:text="00:02"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tv_to"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="QARSHI"
@@ -128,6 +130,7 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_place_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="179 joylar"
@@ -151,9 +154,10 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_cost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="84250 so'm"
+                android:text="83 400 so'm"
                 android:textSize="12sp"
                 android:textColor="@color/black"/>
         </LinearLayout>
@@ -174,6 +178,7 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_place_num_plast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="19 joylar"
@@ -196,9 +201,10 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_cost_plast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="93920 so'm"
+                android:text="102 908 so'm"
                 android:textSize="12sp"
                 android:textColor="@color/black"/>
         </LinearLayout>
@@ -225,6 +231,7 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_place_num_kupe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4 joylar"
@@ -247,9 +254,10 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_cost_kupe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="122750 so'm"
+                android:text="90 500 so'm"
                 android:textSize="12sp"
                 android:textColor="@color/black"/>
         </LinearLayout>

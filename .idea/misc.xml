@@ -5,59 +5,47 @@
       <map>
         <entry key="..\:/Android development/yagona transport chiptasi/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_down.xml" value="0.133" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_telephone_operator_svgrepo_com.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/rounded_textview_blue.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/rounded_view.xml" value="0.133" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/rounded_view_black.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/rounded_view_green.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/spinner_dropdown_icon.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/textview_rounded.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_main.xml" value="0.16111111111111112" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_all_transport.xml" value="0.22" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_bus.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passenger_detail.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passenger_detail_entry.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passengers_setup.xml" value="0.25" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_payment.xml" value="0.20102564102564102" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_payment_type.xml" value="0.4166666666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_plane.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_profile.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_search.xml" value="0.32305433186490456" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_tickets.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_train_details.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_wayto_go.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_bottom_sheet.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_bus_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_detail_entry_bottom_sheet.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_one_id_dialog.xml" value="0.2719406674907293" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_passenger_detail.xml" value="0.5560897435897436" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_plane_list.xml" value="0.5" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_spinner.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_biznes.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_ekonom.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_kupe.xml" value="0.7284768211920529" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_lyuks.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_platskart.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_vip.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_afrosiyob.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_popular.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_sharq.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_train_special.xml" value="0.1" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/ic_swap_right.xml" value="0.1415" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/item_oval.xml" value="0.1415" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/item_oval_grey.xml" value="0.1415" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_luggage.xml" value="0.182" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_orders.xml" value="0.182" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_refresh.xml" value="0.182" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_tickets_icon.xml" value="0.182" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_calendar.xml" value="0.1334853090172239" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_from.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_main.xml" value="0.10733695652173914" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_to.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_all_transport.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_bus.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_orders.xml" value="0.21784420289855072" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passenger_detail.xml" value="0.14402173913043478" />
-        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passengers_setup.xml" value="0.14402173913043478" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passengers_setup.xml" value="0.16" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_plane.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_search.xml" value="0.1334853090172239" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_tickets.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_train_details.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_wayto_go.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_bus_list.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_passenger_detail.xml" value="0.27447916666666666" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_plane_list.xml" value="0.264" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_biznes.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_ekonom.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/item_ticket_kupe.xml" value="0.27447916666666666" />

@@ -15,7 +15,7 @@ import uz.transport.yagonatransportchiptasi.model.PlaneTicket
 
 class PlaneFragment : Fragment() {
     lateinit var binding: FragmentPlaneBinding
-    var departureTime:String = ""
+    var departureTime: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,11 +57,6 @@ class PlaneFragment : Fragment() {
     private fun allPlane(): ArrayList<PlaneTicket> {
         val items = ArrayList<PlaneTicket>()
 
-        items.add(PlaneTicket(1))
-        items.add(PlaneTicket(1))
-        items.add(PlaneTicket(1))
-        items.add(PlaneTicket(1))
-        items.add(PlaneTicket(1))
         items.add(PlaneTicket(1))
         items.add(PlaneTicket(1))
         items.add(PlaneTicket(1))

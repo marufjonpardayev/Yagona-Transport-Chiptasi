@@ -340,6 +340,7 @@
         app:layout_constraintTop_toBottomOf="@id/cvInfant">
 
         <TextView
+            android:id="@+id/tvWagonNumber"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -452,7 +453,8 @@
                         android:id="@+id/ivSeat1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/space_one" />
+                        android:src="@drawable/space_one"
+                        app:tint="@color/center_color" />
 
                     <TextView
                         android:layout_width="15dp"
@@ -632,7 +634,8 @@
                         android:id="@+id/ivSeat17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/space_one" />
+                        android:src="@drawable/space_one"
+                        app:tint="@color/center_color" />
 
                     <TextView
 
@@ -1045,7 +1048,8 @@
                         android:id="@+id/ivSeat6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/space_one" />
+                        android:src="@drawable/space_one"
+                        app:tint="@color/center_color" />
 
                     <TextView
                         android:layout_width="15dp"
@@ -1093,7 +1097,6 @@
                         android:src="@drawable/space_one" />
 
                     <TextView
-
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="27dp"
@@ -1159,7 +1162,8 @@
                         android:id="@+id/ivSeat16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/space_one" />
+                        android:src="@drawable/space_one"
+                        app:tint="@color/center_color" />
 
                     <TextView
 
@@ -1527,7 +1531,8 @@
                         android:id="@+id/ivSeat48"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/space_one" />
+                        android:src="@drawable/space_one"
+                        app:tint="@color/center_color" />
 
                     <TextView
 
@@ -1548,6 +1553,7 @@
                     android:layout_marginTop="160dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat72"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_left" />
@@ -1592,12 +1598,13 @@
                     android:layout_marginTop="160dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat70"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/space_left" />
+                        android:src="@drawable/space_left"
+                        app:tint="@color/center_color" />
 
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="27dp"
@@ -1614,6 +1621,7 @@
                     android:layout_marginTop="160dp">
 
                     <ImageView
+                        android:id="@+id/ivSeat69"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/space_left" />

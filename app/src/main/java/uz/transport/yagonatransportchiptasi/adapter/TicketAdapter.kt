@@ -5,14 +5,16 @@ import android.view.ViewGroup
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import uz.transport.yagonatransportchiptasi.databinding.*
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.setRandomWagonNumber
 import uz.transport.yagonatransportchiptasi.model.Ticket
 import uz.transport.yagonatransportchiptasi.ui.fragment.TicketsFragment
+import kotlin.random.Random
 
 
 class TicketAdapter(
     val fragment: TicketsFragment,
     val items: ArrayList<Ticket>,
-    private var onItemClicked: (() -> Unit)
+    private var onItemClicked: ((Int) -> Unit),
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -81,38 +83,45 @@ class TicketAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is BiznesViewHolder) {
+            holder.view.tvWagonNum.setRandomWagonNumber()
             holder.view.llBiznes.setOnClickListener {
-                onItemClicked.invoke()
+                onItemClicked.invoke(holder.view.tvWagonNum.text.toString().toInt())
             }
+
         }
 
         if (holder is EkonomViewHolder) {
+            holder.view.tvWagonNum.setRandomWagonNumber()
             holder.view.llEkonom.setOnClickListener {
-                onItemClicked.invoke()
+                onItemClicked.invoke(holder.view.tvWagonNum.text.toString().toInt())
             }
         }
 
         if (holder is KupeViewHolder) {
+            holder.view.tvWagonNum.setRandomWagonNumber()
             holder.view.llKupe.setOnClickListener {
-                onItemClicked.invoke()
+                onItemClicked.invoke(holder.view.tvWagonNum.text.toString().toInt())
             }
         }
 
         if (holder is LyuksViewHolder) {
+            holder.view.tvWagonNum.setRandomWagonNumber()
             holder.view.llLyuks.setOnClickListener {
-                onItemClicked.invoke()
+                onItemClicked.invoke(holder.view.tvWagonNum.text.toString().toInt())
             }
         }
 
         if (holder is PlatskartViewHolder) {
+            holder.view.tvWagonNum.setRandomWagonNumber()
             holder.view.llPlaskart.setOnClickListener {
-                onItemClicked.invoke()
+                onItemClicked.invoke(holder.view.tvWagonNum.text.toString().toInt())
             }
         }
 
         if (holder is VipViewHolder) {
+            holder.view.tvWagonNum.setRandomWagonNumber()
             holder.view.llVip.setOnClickListener {
-                onItemClicked.invoke()
+                onItemClicked.invoke(holder.view.tvWagonNum.text.toString().toInt())
             }
         }
     }

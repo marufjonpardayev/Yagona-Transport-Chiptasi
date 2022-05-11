@@ -1,7 +1,5 @@
 package uz.transport.yagonatransportchiptasi.model
 
-import android.widget.TextView
-
 data class BusTicket(
     val tv_company_name: String,
     val tv_start_time: String,

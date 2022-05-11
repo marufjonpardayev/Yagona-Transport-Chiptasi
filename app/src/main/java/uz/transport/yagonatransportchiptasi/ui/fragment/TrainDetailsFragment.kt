@@ -53,7 +53,7 @@ class TrainDetailsFragment : Fragment() {
     }
 
     private fun refreshAdapter(items: ArrayList<Train>) {
-        val adapter = TrainAdapter(this, items) { type ->
+        val adapter = TrainAdapter(requireContext(), items) { type ->
             findNavController().navigate(
                 R.id.action_trainDetailsFragment_to_ticketsFragment,
                 bundleOf("type" to type,  "date" to departureTime)
@@ -66,13 +66,13 @@ class TrainDetailsFragment : Fragment() {
         val items = ArrayList<Train>()
 
         items.add(Train(1))
-        items.add(Train(3))
+        items.add(Train(2))
+        items.add(Train(4))
+        items.add(Train(4))
         items.add(Train(1))
         items.add(Train(2))
-        items.add(Train(2))
         items.add(Train(3))
-        items.add(Train(2))
-        items.add(Train(1))
+        items.add(Train(4))
 
         return items
     }

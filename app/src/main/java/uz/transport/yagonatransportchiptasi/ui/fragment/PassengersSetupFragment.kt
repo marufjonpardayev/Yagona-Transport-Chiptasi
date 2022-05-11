@@ -11,6 +11,7 @@ import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupBinding
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTextColorAndBackground
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.decreaseValue
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.getAmount
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.increaseValue
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
@@ -22,10 +23,17 @@ class PassengersSetupFragment : Fragment() {
 
     private lateinit var binding: FragmentPassengersSetupBinding
     private var passengers: ArrayList<PassengerStatus> = ArrayList()
+    var wagonNumber = 0
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        wagonNumber = arguments?.get("wagonNumber").toString().toInt()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_passengers_setup, container, false)
@@ -37,6 +45,8 @@ class PassengersSetupFragment : Fragment() {
         binding = FragmentPassengersSetupBinding.bind(view)
 
         binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
+
+        binding.tvWagonNumber.text = wagonNumber.toString()
 
         binding.apply {
             btnNext.setOnClickListener {
@@ -118,5 +128,18 @@ class PassengersSetupFragment : Fragment() {
             R.id.action_passengersSetupFragment_to_passengerDetailFragment,
             bundleOf("passengers" to passengers)
         )
+    }
+
+    fun bookPlace() {
+
+    }
+
+    fun getPassengersAmount(): Int {
+        var all = 1
+        binding.apply {
+            all = tvAdultsNumber.getAmount() + tvChildrenNumber.getAmount()
+        }
+
+        return all
     }
 }

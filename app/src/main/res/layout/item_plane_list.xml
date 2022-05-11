@@ -35,7 +35,8 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/ic_plane" />
+                        android:src="@drawable/ic_plane"
+                        app:tint="@color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -94,7 +95,7 @@
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:gravity="end"
-                        android:text="20:45"
+                        android:text="20:05"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -104,6 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/tv_from"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -111,6 +113,7 @@
                         android:textColor="@color/darker_grey" />
 
                     <TextView
+                        android:id="@+id/tv_to"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Samarqand"
@@ -128,7 +131,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1 soat 40 min"
+                    android:text="1 soat 20 min"
                     android:textColor="@color/black" />
 
             </LinearLayout>
@@ -182,7 +185,7 @@
                         android:id="@+id/tv_money_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2 500 000 so'm"
+                        android:text="1 200 400 so'm"
                         android:textColor="@color/center_color"
                         android:textSize="10sp"
                         android:textStyle="bold"
@@ -234,7 +237,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2 500 000 so'm"
+                        android:text="1 704 000 so'm"
                         android:textColor="@color/center_color"
                         android:textSize="10sp"
                         android:textStyle="bold" />
@@ -294,7 +297,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2 500 000 so'm"
+                        android:text="2 000 000 so'm"
                         android:textColor="@color/center_color"
                         android:textSize="10sp"
                         android:textStyle="bold" />

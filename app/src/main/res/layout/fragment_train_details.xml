@@ -90,7 +90,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/rounded_view"
-            android:backgroundTint="@color/white"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingHorizontal="8dp"
@@ -104,13 +103,14 @@
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/ic_plane" />
+                    android:src="@drawable/ic_plane"
+                    app:tint="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="2467 sum"
+                    android:text="820 999 uzs"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -129,10 +129,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:backgroundTint="@color/light_grey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:backgroundTint="@color/light_grey"
             android:background="@drawable/rounded_view"
             android:gravity="center_vertical"
             android:orientation="vertical"
@@ -154,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="2467 sum"
+                    android:text="83 400 uzs"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -165,7 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="1s 20 m"
+                android:text="3s 50 m"
                 android:textAlignment="center"
                 android:textColor="@color/darker_grey"
                 android:textSize="10sp" />
@@ -196,7 +196,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="2467 sum"
+                    android:text="64 599 uzs"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -207,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="1s 20 m"
+                android:text="6s 30 m"
                 android:textAlignment="center"
                 android:textColor="@color/darker_grey"
                 android:textSize="10sp" />
@@ -217,11 +217,10 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="12dp"
+        android:paddingHorizontal="8dp"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
         android:overScrollMode="never"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
 </LinearLayout>

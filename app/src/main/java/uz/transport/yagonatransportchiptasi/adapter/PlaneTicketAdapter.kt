@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import uz.transport.yagonatransportchiptasi.databinding.ItemPlaneListBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.setDirection
 import uz.transport.yagonatransportchiptasi.model.PlaneTicket
 
 class PlaneTicketAdapter(val context: Context, val items: ArrayList<PlaneTicket>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
@@ -16,7 +18,12 @@ class PlaneTicketAdapter(val context: Context, val items: ArrayList<PlaneTicket>
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-
+        val from = Extensions.loadData(context)
+        val to = Extensions.loadData2(context)
+        if(holder is PlaneTicketViewHolder){
+            holder.view.tvFrom.setDirection(from)
+            holder.view.tvTo.setDirection(to)
+        }
     }
 
     override fun getItemCount(): Int {

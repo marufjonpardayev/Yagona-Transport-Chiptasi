@@ -56,19 +56,12 @@ class BusFragment : Fragment() {
 
     private fun allTickets(): ArrayList<BusTicket> {
         val items = ArrayList<BusTicket>()
+        val date = departureTime.substring(departureTime.indexOf(",")+1,departureTime.length)
 
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-        items.add(BusTicket("", "", "", "", "", "", "", "", ""))
-
+        items.add(BusTicket("SamAuto", "09:45", "14:45", "", "",date , "4 soat", "30", "64 599"))
+        items.add(BusTicket("ElectronBus", "10:45", "13:00", "", "", date, "3 soat 15 minut", "25", "80 000"))
+        items.add(BusTicket("SamAuto", "13:00", "17:00", "", "", date, "4 soat", "30", "64 599"))
+        items.add(BusTicket("ElectronBus", "14:00", "17:15", "", "", date, "3 soat 15 minut", "25", "80 000"))
 
         return items
     }

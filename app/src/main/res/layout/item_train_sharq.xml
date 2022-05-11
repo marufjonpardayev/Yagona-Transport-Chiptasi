@@ -4,9 +4,8 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:background="@drawable/item_oval"
-    android:layout_margin="10dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
+    android:layout_marginTop="8dp"
+    android:padding="10dp"
     android:orientation="vertical"
     android:id="@+id/ll_sharq">
 
@@ -40,6 +39,7 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tv_from"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TOSHKENT"
@@ -100,6 +100,7 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tv_to"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="QARSHI"
@@ -135,6 +136,7 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_place_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="179 joylar"
@@ -156,9 +158,10 @@
                 android:textColor="@color/grey"/>
 
             <TextView
+                android:id="@+id/tv_cost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="84250 so'm"
+                android:text="102 500 so'm"
                 android:textSize="12sp"
                 android:textColor="@color/black"/>
         </LinearLayout>

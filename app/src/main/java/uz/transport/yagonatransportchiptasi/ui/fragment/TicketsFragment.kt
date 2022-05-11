@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.TicketAdapter
@@ -17,7 +18,7 @@ import uz.transport.yagonatransportchiptasi.model.Ticket
 class TicketsFragment : Fragment() {
     lateinit var binding: FragmentTicketsBinding
     var type = 1
-    var departureTime:String = ""
+    var departureTime: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,8 +54,10 @@ class TicketsFragment : Fragment() {
     }
 
     private fun refreshAdapter(items: ArrayList<Ticket>) {
-        val adapter = TicketAdapter(this, items) {
-            findNavController().navigate(R.id.action_ticketsFragment_to_passengersSetupFragment)
+        val adapter = TicketAdapter(this, items) { wagonNumber ->
+            findNavController().navigate(R.id.action_ticketsFragment_to_passengersSetupFragment,
+                bundleOf("wagonNumber" to wagonNumber)
+            )
         }
         binding.recyclerView.adapter = adapter
     }

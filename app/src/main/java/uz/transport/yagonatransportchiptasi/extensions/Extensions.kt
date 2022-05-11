@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.increaseValue
+import kotlin.random.Random
 
 object Extensions {
     fun TextView.increaseValue(tvMinus: TextView) {
@@ -34,17 +35,31 @@ object Extensions {
     fun EditText.isNotEmpty(): Boolean = this.text.isNotEmpty()
     fun TextView.isNotEmpty(): Boolean = this.text.isNotEmpty()
 
-     fun loadData(context: Context): String {
+    fun loadData(context: Context): String {
         val sharedPreferences =
             context.getSharedPreferences("shared", Context.MODE_PRIVATE)
         val savedString = sharedPreferences.getString("region", "Qayerdan?")
         return savedString!!
     }
 
-     fun loadData2(context: Context): String {
+    fun loadData2(context: Context): String {
         val sharedPreferences =
             context.getSharedPreferences("shared", Context.MODE_PRIVATE)
         val savedString = sharedPreferences.getString("regionto", "Qayerga?")
         return savedString!!
     }
+
+    fun TextView.setDirection(text: String) {
+        this.text = text
+    }
+
+    fun TextView.setRandom() {
+        this.text = Random.nextInt(10, 200).toString()
+    }
+
+    fun TextView.setRandomWagonNumber() {
+        this.text = Random.nextInt(1, 12).toString()
+    }
+
+    fun TextView.getAmount():Int = this.text.toString().toInt()
 }

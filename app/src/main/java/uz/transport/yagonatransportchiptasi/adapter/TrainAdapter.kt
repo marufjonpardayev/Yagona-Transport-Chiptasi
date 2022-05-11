@@ -1,5 +1,6 @@
 package uz.transport.yagonatransportchiptasi.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +11,16 @@ import uz.transport.yagonatransportchiptasi.databinding.ItemTrainAfrosiyobBindin
 import uz.transport.yagonatransportchiptasi.databinding.ItemTrainPopularBinding
 import uz.transport.yagonatransportchiptasi.databinding.ItemTrainSharqBinding
 import uz.transport.yagonatransportchiptasi.databinding.ItemTrainSpecialBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.setDirection
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.setRandom
 import uz.transport.yagonatransportchiptasi.model.Train
 import uz.transport.yagonatransportchiptasi.ui.fragment.TrainDetailsFragment
 
 
 class TrainAdapter(
-    val fragment: TrainDetailsFragment,
+    val context: Context,
     val items: ArrayList<Train>,
     private var onItemClicked: ((Int) -> Unit)
 ) :
@@ -69,9 +74,18 @@ class TrainAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = items[position]
+        val from = loadData(context)
+        val to = loadData2(context)
+
         if (holder is SharqViewHolder) {
             holder.view.llSharq.setOnClickListener {
                 onItemClicked.invoke(1)
+            }
+
+            holder.view.apply {
+                tvFrom.setDirection(from)
+                tvTo.setDirection(to)
+                tvPlaceNum.setRandom()
             }
         }
 
@@ -79,17 +93,37 @@ class TrainAdapter(
             holder.view.llPopular.setOnClickListener {
                 onItemClicked.invoke(2)
             }
+
+            holder.view.apply {
+                tvFrom.setDirection(from)
+                tvTo.setDirection(to)
+                tvPlaceNum.setRandom()
+                tvPlaceNumPlast.setRandom()
+                tvPlaceNumKupe.setRandom()
+            }
         }
 
         if (holder is SpecialViewHolder) {
             holder.view.llSpecial.setOnClickListener {
                 onItemClicked.invoke(3)
             }
+
+            holder.view.apply {
+                tvFrom.setDirection(from)
+                tvTo.setDirection(to)
+                tvPlaceNum.setRandom()
+            }
         }
 
         if (holder is AfrosiyobViewHolder) {
             holder.view.llAfrosiyob.setOnClickListener {
                 onItemClicked.invoke(4)
+            }
+
+            holder.view.apply {
+                tvFrom.setDirection(from)
+                tvTo.setDirection(to)
+                tvPlaceNum.setRandom()
             }
         }
     }

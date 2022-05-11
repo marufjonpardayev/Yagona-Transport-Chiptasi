@@ -6,9 +6,8 @@
     android:id="@+id/llKupe"
     android:gravity="center"
     android:background="@drawable/item_oval"
-    android:layout_margin="10dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
+    android:layout_margin="8dp"
+    android:padding="10dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -31,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="111 270 so'm"
+            android:text="141 270 so'm"
             android:gravity="end"
             android:textStyle="bold"
             android:textColor="#03A9F4"
@@ -54,6 +53,7 @@
             android:textSize="12sp"/>
 
         <TextView
+            android:id="@+id/tv_wagon_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="04"
