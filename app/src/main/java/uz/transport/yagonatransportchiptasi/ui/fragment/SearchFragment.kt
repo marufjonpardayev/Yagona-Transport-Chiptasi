@@ -99,7 +99,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun djafv() {
-
+        val int = 10111
     }
 
     private fun loadData(): String {
