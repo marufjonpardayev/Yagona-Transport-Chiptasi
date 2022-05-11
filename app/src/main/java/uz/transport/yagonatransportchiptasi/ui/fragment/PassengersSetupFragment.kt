@@ -12,6 +12,8 @@ import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupB
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTextColorAndBackground
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.decreaseValue
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.increaseValue
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.selectOneAtLeast
 import uz.transport.yagonatransportchiptasi.model.PassengerStatus
 
@@ -33,6 +35,8 @@ class PassengersSetupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentPassengersSetupBinding.bind(view)
+
+        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
 
         binding.apply {
             btnNext.setOnClickListener {

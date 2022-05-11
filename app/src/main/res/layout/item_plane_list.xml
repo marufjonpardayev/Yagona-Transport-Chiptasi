@@ -52,7 +52,6 @@
                 android:layout_weight="1"/>
 
             <TextView
-                android:id="@+id/tv_company_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UzAirways"
@@ -77,7 +76,6 @@
                     android:gravity="center_vertical">
 
                     <TextView
-                        android:id="@+id/tv_start_time"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:text="18:45"
@@ -92,7 +90,6 @@
                         android:background="@color/black"/>
 
                     <TextView
-                        android:id="@+id/tv_finish_time"
                         android:layout_width="60dp"
                         android:gravity="end"
                         android:layout_height="wrap_content"
@@ -107,14 +104,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/tv_palce_start"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Toshkent"/>
 
                     <TextView
-                        android:id="@+id/tv_place_finish"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Samarqand"/>
@@ -129,11 +124,14 @@
                 android:gravity="top|end">
 
                 <TextView
-                    android:id="@+id/tv_time_spend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1 soat 40 min"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bevosita"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -154,7 +152,7 @@
                     android:layout_margin="5dp">
 
                     <TextView
-                        android:id="@+id/tv_unloaded"
+                        android:id="@+id/tv_baggage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Yuksiz"
@@ -169,7 +167,7 @@
                         android:layout_height="8dp"
                         android:layout_marginTop="4dp"
                         android:layout_marginStart="5dp"
-                        app:layout_constraintStart_toEndOf="@id/tv_unloaded"
+                        app:layout_constraintStart_toEndOf="@id/tv_baggage"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         android:src="@drawable/ic_refresh"/>
@@ -180,7 +178,7 @@
                         android:layout_height="wrap_content"
                         android:text="2 000 000 so'm"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_unloaded"
+                        app:layout_constraintTop_toBottomOf="@id/tv_baggage"
                         android:textSize="10sp"
                         android:textStyle="bold"
                         android:textColor="@color/center_color"/>

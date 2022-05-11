@@ -8,12 +8,20 @@ import android.view.ViewGroup
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.TicketAdapter
 import uz.transport.yagonatransportchiptasi.databinding.FragmentTicketsBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 import uz.transport.yagonatransportchiptasi.model.Ticket
 
 
 class TicketsFragment : Fragment() {
     lateinit var binding: FragmentTicketsBinding
-    val type = 1
+    var type = 1
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        type = arguments?.get("type").toString().toInt()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +37,9 @@ class TicketsFragment : Fragment() {
     }
 
     private fun initViews() {
+
+        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
+
         refreshAdapter(allTickets())
     }
 
@@ -39,14 +50,19 @@ class TicketsFragment : Fragment() {
 
     private fun allTickets(): ArrayList<Ticket> {
         val items = ArrayList<Ticket>()
-        if (type == 1){
-            items.addAll(trainAfrosiyob())
-        }else if (type == 2){
-            items.addAll(trainSharq())
-        }else if (type == 3){
-            items.addAll(trainPopular())
-        }else{
-            items.addAll(trainSpecial())
+        when (type) {
+            1 -> {
+                items.addAll(trainAfrosiyob())
+            }
+            2 -> {
+                items.addAll(trainSharq())
+            }
+            3 -> {
+                items.addAll(trainPopular())
+            }
+            else -> {
+                items.addAll(trainSpecial())
+            }
         }
         return items
     }

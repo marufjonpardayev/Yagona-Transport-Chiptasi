@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentWaytoGoBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions
 
 class WaytoGoFragment : Fragment() {
     lateinit var binding: FragmentWaytoGoBinding
@@ -26,6 +27,13 @@ class WaytoGoFragment : Fragment() {
     }
 
     private fun initViews() {
+
+        binding.tvDirection.text = "${Extensions.loadData(requireContext())}-${
+            Extensions.loadData2(
+                requireContext()
+            )
+        }"
+
         binding.apply {
             checkbox.setOnClickListener {
                 if (checkbox.isChecked){

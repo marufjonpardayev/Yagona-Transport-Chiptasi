@@ -1,5 +1,6 @@
 package uz.transport.yagonatransportchiptasi.extensions
 
+import android.content.Context
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
@@ -32,4 +33,18 @@ object Extensions {
 
     fun EditText.isNotEmpty(): Boolean = this.text.isNotEmpty()
     fun TextView.isNotEmpty(): Boolean = this.text.isNotEmpty()
+
+     fun loadData(context: Context): String {
+        val sharedPreferences =
+            context.getSharedPreferences("shared", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString("region", "Qayerdan?")
+        return savedString!!
+    }
+
+     fun loadData2(context: Context): String {
+        val sharedPreferences =
+            context.getSharedPreferences("shared", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString("regionto", "Qayerga?")
+        return savedString!!
+    }
 }

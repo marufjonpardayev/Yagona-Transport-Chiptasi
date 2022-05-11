@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.BusTicketAdapter
 import uz.transport.yagonatransportchiptasi.databinding.FragmentBusBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions
 import uz.transport.yagonatransportchiptasi.model.BusTicket
 
 
@@ -29,6 +30,12 @@ class BusFragment : Fragment() {
 
     private fun initViews() {
         refreshAdapter(allTickets())
+
+        binding.tvDirection.text = "${Extensions.loadData(requireContext())}-${
+            Extensions.loadData2(
+                requireContext()
+            )
+        }"
     }
 
     private fun refreshAdapter(items: ArrayList<BusTicket>) {

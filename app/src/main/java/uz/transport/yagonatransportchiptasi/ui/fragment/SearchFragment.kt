@@ -16,6 +16,8 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentSearchBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 import uz.transport.yagonatransportchiptasi.ui.activity.CalendarActivity
 import uz.transport.yagonatransportchiptasi.ui.activity.FromActivity
 import uz.transport.yagonatransportchiptasi.ui.activity.ToActivity
@@ -92,22 +94,8 @@ class SearchFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        binding.tvFrom.text = loadData()
-        binding.tvTo.text = loadData2()
-    }
-
-    private fun loadData(): String {
-        val sharedPreferences =
-            requireContext().getSharedPreferences("shared", Context.MODE_PRIVATE)
-        val savedString = sharedPreferences.getString("region", "Qayerdan?")
-        return savedString!!
-    }
-
-    private fun loadData2(): String {
-        val sharedPreferences =
-            requireContext().getSharedPreferences("shared", Context.MODE_PRIVATE)
-        val savedString = sharedPreferences.getString("regionto", "Qayerga?")
-        return savedString!!
+        binding.tvFrom.text = loadData(requireContext())
+        binding.tvTo.text = loadData2(requireContext())
     }
 
 
@@ -136,9 +124,9 @@ class SearchFragment : Fragment() {
 
     private fun openCalendarActivity(type: Int) {
         val intent = Intent(requireContext(), CalendarActivity::class.java)
-        intent.putExtra("locationStart", loadData())
-        intent.putExtra("locationEnd", loadData2())
-        intent.putExtra("type", "${type}")
+        intent.putExtra("locationStart", loadData(requireContext()))
+        intent.putExtra("locationEnd", loadData2(requireContext()))
+        intent.putExtra("type", "$type")
         postActivity.launch(intent)
     }
 
