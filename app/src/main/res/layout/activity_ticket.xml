@@ -4,11 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.activity.TicketActivity">
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfViewer"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:focusedByDefault="true"
+            android:id="@+id/pdfViewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/data"
+            android:background="@color/white"
+            android:layout_marginTop="223dp"
+            android:layout_marginLeft="250dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="6sp"
+            android:text="30/05/22"
+            android:layout_width="30dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/fullname"
+            android:textAllCaps="true"
+            android:background="@color/white"
+            android:layout_marginTop="165dp"
+            android:layout_marginLeft="174dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="6sp"
+            android:text="Saidahmad Ataullayev"
+            android:layout_width="200dp"
+            android:layout_height="10dp"/>
+    </FrameLayout>
 
 </LinearLayout>
