@@ -49,13 +49,16 @@
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/ic_swap_right.xml" value="0.1415" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/item_oval.xml" value="0.1415" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/item_oval_grey.xml" value="0.1415" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/drawable-v24/view_rounded_corners.xml" value="0.182" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_calendar.xml" value="0.1334853090172239" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_from.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_main.xml" value="0.10733695652173914" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_splash.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_to.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_orders.xml" value="0.21784420289855072" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passenger_detail.xml" value="0.14402173913043478" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passengers_setup.xml" value="0.14402173913043478" />
+        <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_search.xml" value="0.1334853090172239" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_tickets.xml" value="0.27447916666666666" />
         <entry key="..\:/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_train_details.xml" value="0.27447916666666666" />

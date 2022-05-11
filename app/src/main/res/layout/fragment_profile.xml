@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="My account"
+            android:text="Mening sahifam"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="My account"
+            android:text="Operator"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="Orders"
+            android:text="Xaridlarim"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -149,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="Passengers"
+            android:text="Yo'lovchilarim"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -211,7 +211,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="Leave us feedback"
+            android:text="Bizga fikr-mulohazalaringizni qoldiring"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -242,7 +242,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="Application language"
+            android:text="Ilova tili"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -272,7 +272,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Log out"
+            android:text="Chiqish"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -282,7 +282,7 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:singleLine="true"
-            android:text="Sataullayev@gmail.com"
+            android:text="shukurov@gmail.com"
             android:textAlignment="textEnd"
             android:textColor="#80000000"
             android:textSize="15sp" />
