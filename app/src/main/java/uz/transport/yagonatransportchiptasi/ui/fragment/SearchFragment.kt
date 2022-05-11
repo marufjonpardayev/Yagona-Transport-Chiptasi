@@ -94,6 +94,12 @@ class SearchFragment : Fragment() {
         super.onResume()
         binding.tvFrom.text = loadData()
         binding.tvTo.text = loadData2()
+
+        djafv()
+    }
+
+    private fun djafv() {
+
     }
 
     private fun loadData(): String {
