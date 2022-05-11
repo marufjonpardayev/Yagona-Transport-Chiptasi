@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android development/yagona transport chiptasi/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/cornered_background.xml" value="0.134" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/cornered_background_white.xml" value="0.134" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_down.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/ic_telephone_operator_svgrepo_com.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/rounded_textview_blue.xml" value="0.133" />
@@ -13,12 +15,13 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/spinner_dropdown_icon.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/drawable/textview_rounded.xml" value="0.133" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_main.xml" value="0.16111111111111112" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/activity_ticket.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_all_transport.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_bus.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passenger_detail.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passenger_detail_entry.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_passengers_setup.xml" value="0.25" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_payment.xml" value="0.20102564102564102" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_payment.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_payment_type.xml" value="0.4166666666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_plane.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Yagona-Transport-Chiptasi/app/src/main/res/layout/fragment_profile.xml" value="0.20102564102564102" />

@@ -109,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="820 999 uzs"
+                    android:text="820 999"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -152,7 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="83 400 uzs"
+                    android:text="83 400"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -195,7 +195,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="64 599 uzs"
+                    android:text="64 599"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />

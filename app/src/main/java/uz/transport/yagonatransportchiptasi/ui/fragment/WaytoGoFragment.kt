@@ -38,10 +38,10 @@ class WaytoGoFragment : Fragment() {
             checkbox.setOnClickListener {
                 if (checkbox.isChecked){
                     cardTaxi.visibility = View.VISIBLE
-                    tvMoney.text = "200000 so'm"
+                    tvMoney.text = "4  020 000 so'm"
                 }else{
                     cardTaxi.visibility = View.GONE
-                    tvMoney.text = "150000 so'm"
+                    tvMoney.text = "4 000 000 so'm"
                 }
             }
         }

@@ -1,8 +1,10 @@
 package uz.transport.yagonatransportchiptasi.extensions
 
 import android.content.Context
+import android.util.Log
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.increaseValue
@@ -61,5 +63,11 @@ object Extensions {
         this.text = Random.nextInt(1, 12).toString()
     }
 
-    fun TextView.getAmount():Int = this.text.toString().toInt()
+    fun TextView.getAmount(): Int = this.text.toString().toInt()
+
+    fun ImageView.changeTint(pickedSeats:Int,all:Int) {
+        if (pickedSeats<=all){
+            this.setColorFilter(R.color.greenn)
+        }
+    }
 }

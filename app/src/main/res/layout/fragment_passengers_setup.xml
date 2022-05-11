@@ -356,7 +356,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="joylar 10"
+            android:text="joylar 6"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -2114,8 +2114,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:background="@drawable/cornered_background"
-            android:backgroundTint="@color/darker_grey"
-            android:enabled="true"
+            android:enabled="false"
             android:text="Keyingi"
             android:textAllCaps="false"
             android:textColor="@color/white"

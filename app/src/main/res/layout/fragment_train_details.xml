@@ -110,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="820 999 uzs"
+                    android:text="820 999"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -129,11 +129,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:backgroundTint="@color/light_grey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:background="@drawable/rounded_view"
+            android:backgroundTint="@color/light_grey"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingHorizontal="8dp"
@@ -154,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="83 400 uzs"
+                    android:text="83 400"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -196,7 +196,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="64 599 uzs"
+                    android:text="64 599"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -217,10 +217,10 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:paddingHorizontal="8dp"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never"
+        android:paddingHorizontal="8dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
 </LinearLayout>
