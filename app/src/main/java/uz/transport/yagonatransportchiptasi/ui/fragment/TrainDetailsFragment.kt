@@ -1,5 +1,6 @@
 package uz.transport.yagonatransportchiptasi.ui.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,6 +17,12 @@ import uz.transport.yagonatransportchiptasi.model.Train
 class TrainDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentTrainDetailsBinding
+    var departureTime:String = ""
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        departureTime = arguments?.get("date").toString()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,22 +38,25 @@ class TrainDetailsFragment : Fragment() {
     }
 
 
+    @SuppressLint("SetTextI18n")
     private fun initViews() {
 
-        binding.tvDirection.text = "${Extensions.loadData(requireContext())}-${
-            Extensions.loadData2(
-                requireContext()
-            )
-        }"
+        binding.tvDirection.text = "${Extensions.loadData(requireContext())}-${Extensions.loadData2(requireContext())}"
 
         refreshAdapter(allTrains())
+
+        binding.tvDate.text = departureTime
+
+        binding.ivBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
     private fun refreshAdapter(items: ArrayList<Train>) {
         val adapter = TrainAdapter(this, items) { type ->
             findNavController().navigate(
                 R.id.action_trainDetailsFragment_to_ticketsFragment,
-                bundleOf("type" to type)
+                bundleOf("type" to type,  "date" to departureTime)
             )
         }
         binding.recyclerView.adapter = adapter
