@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.PlaneTicketAdapter
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPlaneBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 import uz.transport.yagonatransportchiptasi.model.PlaneTicket
 
 
@@ -28,6 +30,9 @@ class PlaneFragment : Fragment() {
     }
 
     private fun initViews() {
+
+        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
+
         refreshAdapter(allPlane())
     }
 

@@ -16,6 +16,8 @@ import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.adapter.PassengerDetailAdapter
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengerDetailBinding
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.isNotEmpty
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 import uz.transport.yagonatransportchiptasi.model.PassengerDetail
 import uz.transport.yagonatransportchiptasi.model.PassengerStatus
 import uz.transport.yagonatransportchiptasi.utils.DialogView
@@ -57,6 +59,8 @@ class PassengerDetailFragment : Fragment() {
     }
 
     private fun initViews() {
+
+        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
 
         sheetBehavior = BottomSheetBehavior.from(bottomSheet)
         hideBottomSheet()

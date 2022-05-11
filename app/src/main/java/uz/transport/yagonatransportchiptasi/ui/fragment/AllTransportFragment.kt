@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentAllTransportBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 
 class AllTransportFragment : Fragment() {
 
-    private lateinit var binding:FragmentAllTransportBinding
+    private lateinit var binding: FragmentAllTransportBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,8 +28,18 @@ class AllTransportFragment : Fragment() {
 
         binding = FragmentAllTransportBinding.bind(view)
 
-        binding.btnShowTrains.setOnClickListener {
-            findNavController().navigate(R.id.action_allTransportFragment_to_passengersSetupFragment)
+        binding.btnShowBuses.setOnClickListener {
+            findNavController().navigate(R.id.action_allTransportFragment_to_busFragment)
         }
+
+        binding.btnShowFlights.setOnClickListener {
+            findNavController().navigate(R.id.action_allTransportFragment_to_planeFragment)
+        }
+
+        binding.btnShowTrains.setOnClickListener {
+            findNavController().navigate(R.id.action_allTransportFragment_to_trainDetailsFragment)
+        }
+
+        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
     }
 }

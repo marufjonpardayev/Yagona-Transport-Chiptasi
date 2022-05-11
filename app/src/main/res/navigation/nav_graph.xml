@@ -76,8 +76,26 @@
         android:label="fragment_all_transport"
         tools:layout="@layout/fragment_all_transport" >
         <action
-            android:id="@+id/action_allTransportFragment_to_passengersSetupFragment"
-            app:destination="@id/passengersSetupFragment" />
+            android:id="@+id/action_allTransportFragment_to_trainDetailsFragment"
+            app:destination="@id/trainDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_allTransportFragment_to_planeFragment"
+            app:destination="@id/planeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_allTransportFragment_to_busFragment"
+            app:destination="@id/busFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/paymentTypeFragment"
@@ -87,6 +105,38 @@
         <action
             android:id="@+id/action_paymentTypeFragment_to_paymentFragment"
             app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/busFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.BusFragment"
+        android:label="BusFragment" />
+    <fragment
+        android:id="@+id/planeFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.PlaneFragment"
+        android:label="PlaneFragment" />
+    <fragment
+        android:id="@+id/trainDetailsFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.TrainDetailsFragment"
+        android:label="TrainDetailsFragment" >
+        <action
+            android:id="@+id/action_trainDetailsFragment_to_ticketsFragment"
+            app:destination="@id/ticketsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/ticketsFragment"
+        android:name="uz.transport.yagonatransportchiptasi.ui.fragment.TicketsFragment"
+        android:label="TicketsFragment" >
+        <action
+            android:id="@+id/action_ticketsFragment_to_passengersSetupFragment"
+            app:destination="@id/passengersSetupFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
