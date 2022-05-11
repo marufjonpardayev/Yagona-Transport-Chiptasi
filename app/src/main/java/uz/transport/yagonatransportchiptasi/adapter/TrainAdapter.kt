@@ -6,6 +6,10 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import uz.transport.yagonatransportchiptasi.R
+import uz.transport.yagonatransportchiptasi.databinding.ItemTrainAfrosiyobBinding
+import uz.transport.yagonatransportchiptasi.databinding.ItemTrainPopularBinding
+import uz.transport.yagonatransportchiptasi.databinding.ItemTrainSharqBinding
+import uz.transport.yagonatransportchiptasi.databinding.ItemTrainSpecialBinding
 import uz.transport.yagonatransportchiptasi.model.Train
 import uz.transport.yagonatransportchiptasi.ui.fragment.TrainDetailsFragment
 
@@ -33,20 +37,24 @@ class TrainAdapter(val fragment: TrainDetailsFragment, val items: ArrayList<Trai
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType == TYPE_ITEM_SHARQ){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_train_sharq, parent, false)
+            val view =
+                ItemTrainSharqBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return SharqViewHolder(view)
         }
         if (viewType == TYPE_ITEM_POPULAR){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_train_popular, parent, false)
+            val view =
+                ItemTrainPopularBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return PopularViewHolder(view)
         }
 
         if (viewType == TYPE_ITEM_AFROSIYOB){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_train_afrosiyob, parent, false)
+            val view =
+                ItemTrainAfrosiyobBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return AfrosiyobViewHolder(view)
         }
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_train_special, parent, false)
+        val view =
+            ItemTrainSpecialBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SpecialViewHolder(view)
 
     }
@@ -54,22 +62,22 @@ class TrainAdapter(val fragment: TrainDetailsFragment, val items: ArrayList<Trai
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = items[position]
         if (holder is SharqViewHolder){
-            val ll_sharq = holder.ll_sharq
+
             fragment.openTicket(1)
         }
 
         if (holder is PopularViewHolder){
-            val ll_popular = holder.ll_popular
+
             fragment.openTicket(2)
         }
 
         if (holder is SpecialViewHolder){
-            val ll_special = holder.ll_special
+
             fragment.openTicket(3)
         }
 
         if (holder is AfrosiyobViewHolder){
-            val ll_afrosyob = holder.ll_afrosiyob
+
             fragment.openTicket(4)
         }
 
@@ -79,35 +87,17 @@ class TrainAdapter(val fragment: TrainDetailsFragment, val items: ArrayList<Trai
         return items.size
     }
 
-    class SharqViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val ll_sharq: LinearLayout
-
-        init {
-            ll_sharq = view.findViewById(R.id.ll_sharq)
-        }
+    class SharqViewHolder(val view: ItemTrainSharqBinding) : RecyclerView.ViewHolder(view.root) {
     }
 
-    class PopularViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val ll_popular: LinearLayout
+    class PopularViewHolder(val view: ItemTrainPopularBinding) : RecyclerView.ViewHolder(view.root) {
 
-        init {
-            ll_popular = view.findViewById(R.id.ll_popular)
-        }
     }
 
-    class SpecialViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val ll_special: LinearLayout
-
-        init {
-            ll_special = view.findViewById(R.id.ll_special)
-        }
+    class SpecialViewHolder(val view: ItemTrainSpecialBinding) : RecyclerView.ViewHolder(view.root) {
     }
 
-    class AfrosiyobViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val ll_afrosiyob: LinearLayout
+    class AfrosiyobViewHolder(val view: ItemTrainAfrosiyobBinding) : RecyclerView.ViewHolder(view.root) {
 
-        init {
-            ll_afrosiyob = view.findViewById(R.id.ll_afrosiyob)
-        }
     }
 }

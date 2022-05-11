@@ -1,10 +1,10 @@
 package uz.transport.yagonatransportchiptasi.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
-import uz.transport.yagonatransportchiptasi.R
+import uz.transport.yagonatransportchiptasi.databinding.*
 import uz.transport.yagonatransportchiptasi.model.Ticket
 import uz.transport.yagonatransportchiptasi.ui.fragment.TicketsFragment
 
@@ -38,32 +38,36 @@ class TicketAdapter(val fragment: TicketsFragment, val items: ArrayList<Ticket>)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType == TYPE_ITEM_BIZNES){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_ticket_biznes, parent, false)
+            val view =
+                ItemTicketBiznesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return BiznesViewHolder(view)
         }
 
         if (viewType == TYPE_ITEM_EKONOM){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_ticket_ekonom, parent, false)
+            val view =
+                ItemTicketEkonomBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return EkonomViewHolder(view)
         }
 
         if (viewType == TYPE_ITEM_KUPE){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_ticket_kupe, parent, false)
+            val view =
+                ItemTicketKupeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return KupeViewHolder(view)
         }
 
         if (viewType == TYPE_ITEM_LYUKS){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_ticket_lyuks, parent, false)
+            val view =
+                ItemTicketLyuksBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return LyuksViewHolder(view)
         }
         if (viewType == TYPE_ITEM_PLATSKART) {
-            val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_ticket_platskart, parent, false)
+            val view =
+                ItemTicketPlatskartBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return PlatskartViewHolder(view)
         }
 
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_ticket_vip, parent, false)
+        val view =
+            ItemTicketVipBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return VipViewHolder(view)
     }
 
@@ -75,27 +79,27 @@ class TicketAdapter(val fragment: TicketsFragment, val items: ArrayList<Ticket>)
         return items.size
     }
 
-    class BiznesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class BiznesViewHolder(val view: ItemTicketBiznesBinding) : RecyclerView.ViewHolder(view.root) {
 
     }
 
-    class EkonomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class EkonomViewHolder(val view: ItemTicketEkonomBinding) : RecyclerView.ViewHolder(view.root) {
 
     }
 
-    class KupeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class KupeViewHolder(val view: ItemTicketKupeBinding) : RecyclerView.ViewHolder(view.root) {
 
     }
 
-    class LyuksViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class LyuksViewHolder(val view: ItemTicketLyuksBinding) : RecyclerView.ViewHolder(view.root) {
 
     }
 
-    class PlatskartViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class PlatskartViewHolder(val view: ItemTicketPlatskartBinding) : RecyclerView.ViewHolder(view.root) {
 
     }
 
-    class VipViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class VipViewHolder(val view: ItemTicketVipBinding) : RecyclerView.ViewHolder(view.root) {
 
     }
 }
