@@ -1,6 +1,7 @@
 package uz.transport.yagonatransportchiptasi.ui.activity
 
 import android.content.Context
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -23,6 +24,8 @@ class FromActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFromBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         initViews()
     }
 

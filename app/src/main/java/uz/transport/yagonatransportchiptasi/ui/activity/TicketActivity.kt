@@ -1,5 +1,6 @@
 package uz.transport.yagonatransportchiptasi.ui.activity
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.github.barteksc.pdfviewer.PDFView
@@ -13,5 +14,7 @@ class TicketActivity : AppCompatActivity() {
 
         val pdfView = findViewById<PDFView>(R.id.pdfViewer)
         pdfView.fromAsset("ticket.pdf").load()
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 }

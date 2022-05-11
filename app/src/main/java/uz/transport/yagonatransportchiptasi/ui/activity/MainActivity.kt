@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         setupUI()
 
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
 

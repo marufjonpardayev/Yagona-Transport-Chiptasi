@@ -251,40 +251,40 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/ic_calendar" />
-
-                <TextView
-                    android:id="@+id/tvArrival"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/font_for_texts"
-                    android:hint="Orqaga"
-                    android:textColor="@color/white"
-                    android:textColorHint="#BABABA"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="NestedWeights" />
+                    android:gravity="center_vertical">
 
-                <ImageView
-                    android:id="@+id/iv_close"
-                    android:visibility="gone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:tint="@color/black"
-                    android:src="@drawable/ic_close"/>
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_calendar" />
+
+                    <TextView
+                        android:id="@+id/tvArrival"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_for_texts"
+                        android:hint="Orqaga"
+                        android:textColor="@color/white"
+                        android:textColorHint="#BABABA"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="NestedWeights" />
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_close"
+                        android:visibility="gone"
+                        app:tint="@color/black" />
+                </LinearLayout>
 
                 <View
                     android:id="@+id/vwWhite4"
