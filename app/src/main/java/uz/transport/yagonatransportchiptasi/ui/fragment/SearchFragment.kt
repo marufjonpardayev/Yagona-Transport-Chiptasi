@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
@@ -28,6 +29,7 @@ import java.util.*
 class SearchFragment : Fragment() {
 
     private lateinit var binding: FragmentSearchBinding
+    var departureDateTime: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,6 +68,7 @@ class SearchFragment : Fragment() {
             }
 
             tvDeparture.text = giveDate()
+            departureDateTime = giveDate()
 
             btnSearch.setOnClickListener {
                 if (tvFrom.text.toString().trim().lowercase() == "moskva") {
@@ -100,17 +103,15 @@ class SearchFragment : Fragment() {
 
 
     private fun openPassengerSetupFragment() {
-        findNavController().navigate(R.id.action_searchFragment_to_allTransportFragment)
+        findNavController().navigate(R.id.action_searchFragment_to_allTransportFragment, bundleOf("date" to departureDateTime))
     }
 
     private fun openFromFragment() {
-        // findNavController().navigate(R.id.action_searchFragment_to_fromFragment2)
         val intent = Intent(requireContext(), FromActivity::class.java)
         startActivity(intent)
     }
 
     private fun openToFragment() {
-        //findNavController().navigate(R.id.action_searchFragment_to_toFragment)
         val intent = Intent(requireContext(), ToActivity::class.java)
         startActivity(intent)
     }
@@ -151,6 +152,7 @@ class SearchFragment : Fragment() {
                 date = originalFormat.parse("$day $month $year")
                 if (type.toInt() == 1) {
                     binding.tvDeparture.text = targetFormat.format(date).toString()
+                    departureDateTime = targetFormat.format(date).toString()
                 } else {
                     binding.tvArrival.text = targetFormat.format(date).toString()
                     binding.ivClose.visibility = View.VISIBLE

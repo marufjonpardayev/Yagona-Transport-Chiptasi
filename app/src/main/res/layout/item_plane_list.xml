@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -107,11 +108,13 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textColor="@color/grey"
                         android:text="Toshkent"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/grey"
                         android:text="Samarqand"/>
                 </LinearLayout>
             </LinearLayout>
@@ -128,10 +131,6 @@
                     android:layout_height="wrap_content"
                     android:text="1 soat 40 min"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="bevosita"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -144,7 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
-                android:backgroundTint="#7CB2E3">
+                android:backgroundTint="@color/light_blue">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -190,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
-                android:backgroundTint="#7CB2E3">
+                android:backgroundTint="@color/light_blue">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -246,7 +245,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
-                android:backgroundTint="#7CB2E3">
+                android:backgroundTint="@color/light_blue">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"

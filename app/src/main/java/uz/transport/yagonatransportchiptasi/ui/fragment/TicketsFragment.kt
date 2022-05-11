@@ -16,11 +16,13 @@ import uz.transport.yagonatransportchiptasi.model.Ticket
 class TicketsFragment : Fragment() {
     lateinit var binding: FragmentTicketsBinding
     var type = 1
+    var departureTime:String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         type = arguments?.get("type").toString().toInt()
+        departureTime = arguments?.get("date").toString()
     }
 
     override fun onCreateView(
@@ -41,6 +43,12 @@ class TicketsFragment : Fragment() {
         binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
 
         refreshAdapter(allTickets())
+
+        binding.tvDate.text = departureTime
+
+        binding.ivBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
     private fun refreshAdapter(items: ArrayList<Ticket>) {
