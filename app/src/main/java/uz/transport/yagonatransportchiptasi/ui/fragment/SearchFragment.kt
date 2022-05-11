@@ -100,6 +100,8 @@ class SearchFragment : Fragment() {
 
     private fun djafv() {
         val int = 10111
+        val hh = 1002
+        val  jsdhs = 2222
     }
 
     private fun loadData(): String {
