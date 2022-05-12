@@ -9,6 +9,8 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeBackgroundTint
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeBackgroundTintCenter
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTextColorAndBackground
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTint
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.decreaseValue
@@ -105,14 +107,49 @@ class PassengersSetupFragment : Fragment() {
 
             checkboxDown.setOnCheckedChangeListener { _, b ->
                 checkboxDown.selectOneAtLeast(checkboxUp, b)
+                controlSeats(b, checkboxUp.isChecked)
             }
 
             checkboxUp.setOnCheckedChangeListener { _, b ->
                 checkboxUp.selectOneAtLeast(checkboxDown, b)
+                controlSeats(b, checkboxDown.isChecked)
             }
         }
 
         controlPickSeat()
+    }
+
+    private fun controlSeats(checkboxDown: Boolean, checkboxUp: Boolean) {
+        if (checkboxDown && checkboxUp) {
+            binding.apply {
+                ivSeat1.changeBackgroundTintCenter()
+                ivSeat6.changeBackgroundTintCenter()
+                ivSeat16.changeBackgroundTintCenter()
+                ivSeat17.changeBackgroundTintCenter()
+                ivSeat48.changeBackgroundTintCenter()
+                ivSeat70.changeBackgroundTintCenter()
+            }
+        } else if (checkboxDown) {
+            binding.apply {
+                ivSeat1.changeBackgroundTintCenter()
+                ivSeat17.changeBackgroundTintCenter()
+
+                ivSeat6.changeBackgroundTint()
+                ivSeat16.changeBackgroundTint()
+                ivSeat48.changeBackgroundTint()
+                ivSeat70.changeBackgroundTint()
+            }
+        } else {
+            binding.apply {
+                ivSeat6.changeBackgroundTintCenter()
+                ivSeat16.changeBackgroundTintCenter()
+                ivSeat48.changeBackgroundTintCenter()
+                ivSeat70.changeBackgroundTintCenter()
+
+                ivSeat1.changeBackgroundTint()
+                ivSeat17.changeBackgroundTint()
+            }
+        }
     }
 
     private fun controlPickSeat() {
@@ -147,6 +184,7 @@ class PassengersSetupFragment : Fragment() {
                 ivSeat48.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 48)
                 checkNextButton()
             }
+
             ivSeat70.setOnClickListener {
                 pickedSeats++
                 ivSeat70.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 70)

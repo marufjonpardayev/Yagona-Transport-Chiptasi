@@ -1,12 +1,14 @@
 package uz.transport.yagonatransportchiptasi.extensions
 
 import android.content.Context
+import android.graphics.Color
 import android.util.Log
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import uz.transport.yagonatransportchiptasi.R
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTint
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.increaseValue
 import kotlin.random.Random
 
@@ -72,8 +74,16 @@ object Extensions {
         seatNumber: Int
     ) {
         if (pickedSeats <= all) {
-            this.setColorFilter(R.color.greenn)
+            this.setColorFilter(Color.argb(255, 31, 212, 179))
             pickedSeatsList.add(seatNumber)
         }
+    }
+
+    fun ImageView.changeBackgroundTint(){
+        this.setColorFilter(Color.argb(255, 51, 103, 153))
+    }
+
+    fun ImageView.changeBackgroundTintCenter(){
+        this.setColorFilter(Color.argb(255, 1, 132, 252))
     }
 }
