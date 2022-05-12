@@ -24,6 +24,7 @@ class PassengersSetupFragment : Fragment() {
 
     private lateinit var binding: FragmentPassengersSetupBinding
     private var passengers: ArrayList<PassengerStatus> = ArrayList()
+    var pickedSeatsList = ArrayList<Int>()
     var wagonNumber = 0
     var pickedSeats = 0
 
@@ -51,6 +52,11 @@ class PassengersSetupFragment : Fragment() {
         binding.tvWagonNumber.text = wagonNumber.toString()
 
         binding.apply {
+
+            ivBack.setOnClickListener {
+                requireActivity().onBackPressed()
+            }
+
             btnNext.setOnClickListener {
                 passengers.clear()
                 addPassengersToList()
@@ -114,36 +120,36 @@ class PassengersSetupFragment : Fragment() {
         binding.apply {
             ivSeat1.setOnClickListener {
                 pickedSeats++
-                ivSeat1.changeTint(pickedSeats, getPassengersAmount())
+                ivSeat1.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 1)
                 checkNextButton()
             }
 
             ivSeat6.setOnClickListener {
                 pickedSeats++
-                ivSeat6.changeTint(pickedSeats, getPassengersAmount())
+                ivSeat6.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 6)
                 checkNextButton()
             }
 
             ivSeat16.setOnClickListener {
                 pickedSeats++
-                ivSeat16.changeTint(pickedSeats, getPassengersAmount())
+                ivSeat16.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 16)
                 checkNextButton()
             }
 
             ivSeat17.setOnClickListener {
                 pickedSeats++
-                ivSeat17.changeTint(pickedSeats, getPassengersAmount())
+                ivSeat17.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 17)
                 checkNextButton()
             }
 
             ivSeat48.setOnClickListener {
                 pickedSeats++
-                ivSeat48.changeTint(pickedSeats, getPassengersAmount())
+                ivSeat48.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 48)
                 checkNextButton()
             }
             ivSeat70.setOnClickListener {
                 pickedSeats++
-                ivSeat70.changeTint(pickedSeats, getPassengersAmount())
+                ivSeat70.changeTint(pickedSeats, getPassengersAmount(), pickedSeatsList, 70)
                 checkNextButton()
             }
         }
@@ -177,12 +183,12 @@ class PassengersSetupFragment : Fragment() {
     private fun openPassengerDetailFragment() {
         findNavController().navigate(
             R.id.action_passengersSetupFragment_to_passengerDetailFragment,
-            bundleOf("passengers" to passengers)
+            bundleOf(
+                "passengers" to passengers,
+                "departureDate" to arguments?.get("departureDate"),
+                "pickedSeatsList" to pickedSeatsList
+            )
         )
-    }
-
-    fun bookPlace() {
-
     }
 
     private fun getPassengersAmount(): Int {

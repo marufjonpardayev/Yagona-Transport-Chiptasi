@@ -55,8 +55,9 @@ class TicketsFragment : Fragment() {
 
     private fun refreshAdapter(items: ArrayList<Ticket>) {
         val adapter = TicketAdapter(this, items) { wagonNumber ->
-            findNavController().navigate(R.id.action_ticketsFragment_to_passengersSetupFragment,
-                bundleOf("wagonNumber" to wagonNumber)
+            findNavController().navigate(
+                R.id.action_ticketsFragment_to_passengersSetupFragment,
+                bundleOf("wagonNumber" to wagonNumber, "departureDate" to departureTime)
             )
         }
         binding.recyclerView.adapter = adapter

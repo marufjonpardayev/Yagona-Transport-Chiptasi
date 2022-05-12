@@ -12,7 +12,8 @@ class PassengerDetailAdapter(private var onItemClicked: ((Int) -> Unit)) :
     RecyclerView.Adapter<PassengerDetailAdapter.VH>() {
 
     private val passengers: ArrayList<PassengerStatus> = ArrayList()
-    private val passengerDetails: ArrayList<PassengerDetail?> = ArrayList()
+    private val pickedSeatsList: ArrayList<Int> = ArrayList()
+    val passengerDetails: ArrayList<PassengerDetail?> = ArrayList()
 
     inner class VH(val binding: ItemPassengerDetailBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -30,7 +31,7 @@ class PassengerDetailAdapter(private var onItemClicked: ((Int) -> Unit)) :
         val passengerStatus = passengers[position]
         holder.binding.apply {
             if (passengerStatus.status != "Infant") {
-                tvPlaceNumber.text = "Joy ${passengerStatus.placeNumber}"
+                tvPlaceNumber.text = "Joy ${pickedSeatsList[position]}"
                 tvUpOrDown.text = passengerStatus.upOrDown
                 tvStatus.text = passengerStatus.status
 
@@ -72,7 +73,7 @@ class PassengerDetailAdapter(private var onItemClicked: ((Int) -> Unit)) :
         list: ArrayList<PassengerStatus>
     ) {
         passengers.addAll(list)
-        for (i in list.indices){
+        for (i in list.indices) {
             passengerDetails.add(null)
         }
     }
@@ -80,5 +81,9 @@ class PassengerDetailAdapter(private var onItemClicked: ((Int) -> Unit)) :
     fun submitDataToDetails(position: Int, passengerDetail: PassengerDetail) {
         passengerDetails.add(position, passengerDetail)
         notifyItemChanged(position)
+    }
+
+    fun submitPickedSeatsList(list: ArrayList<Int>) {
+        pickedSeatsList.addAll(list)
     }
 }

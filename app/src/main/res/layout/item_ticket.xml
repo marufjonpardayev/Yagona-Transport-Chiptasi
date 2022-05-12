@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llOrder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_view"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_tickets_icon" />
+
+        <TextView
+            android:id="@+id/tvFullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Someone someone someone"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_horizontal_rule" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="may 25,Pay"
+            android:textColor="@color/center_color"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_swap_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Someone"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Someone"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNFC"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_gradient"
+        android:text="NFC"
+        android:textColor="@color/white" />
+
+</LinearLayout>

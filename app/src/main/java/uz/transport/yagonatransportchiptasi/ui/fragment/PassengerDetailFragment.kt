@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.widget.AppCompatSpinner
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import uz.transport.yagonatransportchiptasi.R
@@ -32,6 +33,7 @@ class PassengerDetailFragment : Fragment() {
     private lateinit var passengers: ArrayList<PassengerStatus>
     private lateinit var sheetBehavior: BottomSheetBehavior<View>
     private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
+    private lateinit var pickedSeatsList: ArrayList<Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,8 @@ class PassengerDetailFragment : Fragment() {
         if (arguments?.get("passengers") != null) {
             passengers = arguments?.get("passengers") as ArrayList<PassengerStatus>
         }
+
+        pickedSeatsList = arguments?.get("pickedSeatsList") as ArrayList<Int>
     }
 
     override fun onCreateView(
@@ -75,10 +79,22 @@ class PassengerDetailFragment : Fragment() {
         }
 
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_passengerDetailFragment_to_paymentTypeFragment)
+            openPaymentFragment()
         }
 
+        passengerDetailAdapter.submitPickedSeatsList(pickedSeatsList)
+
         refreshAdapter(passengers)
+    }
+
+    private fun openPaymentFragment() {
+        findNavController().navigate(
+            R.id.action_passengerDetailFragment_to_paymentTypeFragment,
+            bundleOf(
+                "passengerDetails" to passengerDetailAdapter.passengerDetails,
+                "departureDate" to arguments?.get("departureDate")
+            )
+        )
     }
 
     private fun showBottomSheet() {

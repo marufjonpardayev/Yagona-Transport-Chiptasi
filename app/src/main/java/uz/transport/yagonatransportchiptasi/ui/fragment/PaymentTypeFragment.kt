@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPaymentTypeBinding
@@ -28,7 +29,13 @@ class PaymentTypeFragment : Fragment() {
 
         //open
         binding.cvPayme.setOnClickListener {
-            findNavController().navigate(R.id.action_paymentTypeFragment_to_paymentFragment)
+            findNavController().navigate(
+                R.id.action_paymentTypeFragment_to_paymentFragment,
+                bundleOf(
+                    "passengerDetails" to arguments?.get("passengerDetails"),
+                    "departureDate" to arguments?.get("departureDate")
+                )
+            )
         }
     }
 }

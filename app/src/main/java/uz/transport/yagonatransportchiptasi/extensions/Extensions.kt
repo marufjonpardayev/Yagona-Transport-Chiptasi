@@ -65,9 +65,15 @@ object Extensions {
 
     fun TextView.getAmount(): Int = this.text.toString().toInt()
 
-    fun ImageView.changeTint(pickedSeats:Int,all:Int) {
-        if (pickedSeats<=all){
+    fun ImageView.changeTint(
+        pickedSeats: Int,
+        all: Int,
+        pickedSeatsList: ArrayList<Int>,
+        seatNumber: Int
+    ) {
+        if (pickedSeats <= all) {
             this.setColorFilter(R.color.greenn)
+            pickedSeatsList.add(seatNumber)
         }
     }
 }
