@@ -17,11 +17,14 @@ import uz.transport.yagonatransportchiptasi.model.Train
 class TrainDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentTrainDetailsBinding
-    var departureTime:String = ""
+    var departureTime: String = ""
+    var fromMoscow = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         departureTime = arguments?.get("date").toString()
+        fromMoscow = arguments?.get("fromMoscow").toString()
     }
 
     override fun onCreateView(
@@ -41,7 +44,13 @@ class TrainDetailsFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private fun initViews() {
 
-        binding.tvDirection.text = "${Extensions.loadData(requireContext())}-${Extensions.loadData2(requireContext())}"
+        if (fromMoscow == "true") {
+            binding.tvDirection.text =
+                "Toshkent-${Extensions.loadData2(requireContext())}"
+        } else {
+            binding.tvDirection.text =
+                "${Extensions.loadData(requireContext())}-${Extensions.loadData2(requireContext())}"
+        }
 
         refreshAdapter(allTrains())
 
@@ -56,7 +65,11 @@ class TrainDetailsFragment : Fragment() {
         val adapter = TrainAdapter(requireContext(), items) { type ->
             findNavController().navigate(
                 R.id.action_trainDetailsFragment_to_ticketsFragment,
-                bundleOf("type" to type,  "date" to departureTime,"fromMoscow" to arguments?.get("fromMoscow").toString())
+                bundleOf(
+                    "type" to type,
+                    "date" to departureTime,
+                    "fromMoscow" to arguments?.get("fromMoscow").toString()
+                )
             )
         }
         binding.recyclerView.adapter = adapter
@@ -65,15 +78,19 @@ class TrainDetailsFragment : Fragment() {
     private fun allTrains(): ArrayList<Train> {
         val items = ArrayList<Train>()
 
-        items.add(Train(1))
-        items.add(Train(2))
-        items.add(Train(4))
-        items.add(Train(4))
-        items.add(Train(1))
-        items.add(Train(2))
-        items.add(Train(3))
-        items.add(Train(4))
-
+        if (fromMoscow == "true") {
+            items.add(Train(2, true))
+            items.add(Train(2, true))
+        } else {
+            items.add(Train(1))
+            items.add(Train(2))
+            items.add(Train(4))
+            items.add(Train(4))
+            items.add(Train(1))
+            items.add(Train(2))
+            items.add(Train(3))
+            items.add(Train(4))
+        }
         return items
     }
 }

@@ -60,7 +60,7 @@ class AllTransportFragment : Fragment() {
         binding.btnShowFlights.setOnClickListener {
             findNavController().navigate(
                 R.id.action_allTransportFragment_to_planeFragment,
-                bundleOf("date" to departureTime)
+                bundleOf("date" to departureTime,"fromMoscow" to fromMoscow)
             )
         }
 

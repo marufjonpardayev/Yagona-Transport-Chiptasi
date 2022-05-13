@@ -79,11 +79,11 @@ object Extensions {
         }
     }
 
-    fun ImageView.changeBackgroundTint() {
-        this.setColorFilter(Color.argb(255, 51, 103, 153))
+    fun ImageView.changeBackgroundTintOff() {
+        this.setColorFilter(Color.argb(255, 161, 161, 161))
     }
 
-    fun ImageView.changeBackgroundTintCenter() {
+    fun ImageView.changeBackgroundTintOn() {
         this.setColorFilter(Color.argb(255, 1, 132, 252))
     }
 

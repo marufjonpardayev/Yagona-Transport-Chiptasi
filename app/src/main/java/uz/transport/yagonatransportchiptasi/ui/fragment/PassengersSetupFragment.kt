@@ -10,8 +10,8 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentPassengersSetupBinding
-import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeBackgroundTint
-import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeBackgroundTintCenter
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeBackgroundTintOff
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeBackgroundTintOn
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTextColorAndBackground
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.changeTint
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.decreaseValue
@@ -50,7 +50,15 @@ class PassengersSetupFragment : Fragment() {
 
         binding = FragmentPassengersSetupBinding.bind(view)
 
-        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
+        if (arguments?.get("fromMoscow").toString() == "true") {
+            binding.tvDirection.text =
+                "Toshkent-${loadData2(requireContext())}"
+
+        } else {
+            binding.tvDirection.text =
+                "${loadData(requireContext())}-${loadData2(requireContext())}"
+
+        }
 
         binding.tvWagonNumber.text = wagonNumber.toString()
 
@@ -110,14 +118,57 @@ class PassengersSetupFragment : Fragment() {
 
             checkboxDown.setOnCheckedChangeListener { _, b ->
                 checkboxDown.selectOneAtLeast(checkboxUp, b)
+                manageUpDown(checkboxDown.isChecked, checkboxUp.isChecked)
             }
 
             checkboxUp.setOnCheckedChangeListener { _, b ->
                 checkboxUp.selectOneAtLeast(checkboxDown, b)
+                manageUpDown(checkboxDown.isChecked, checkboxUp.isChecked)
             }
         }
 
         controlPickSeat()
+    }
+
+    private fun manageUpDown(checkedDown: Boolean, checkedUp: Boolean) {
+        Log.d("TAG", "manageUpDown: $checkedDown $checkedUp")
+        if (checkedDown && checkedUp) {
+            binding.apply {
+                ivSeat1.changeBackgroundTintOn()
+                ivSeat17.changeBackgroundTintOn()
+                ivSeat6.changeBackgroundTintOn()
+                ivSeat16.changeBackgroundTintOn()
+                ivSeat48.changeBackgroundTintOn()
+                ivSeat70.changeBackgroundTintOn()
+            }
+            return
+        }
+
+        if (checkedUp) {
+            binding.apply {
+                ivSeat6.changeBackgroundTintOn()
+                ivSeat16.changeBackgroundTintOn()
+                ivSeat48.changeBackgroundTintOn()
+                ivSeat70.changeBackgroundTintOn()
+
+                ivSeat1.changeBackgroundTintOff()
+                ivSeat17.changeBackgroundTintOff()
+            }
+            return
+        }
+
+        if (checkedDown) {
+            binding.apply {
+                ivSeat6.changeBackgroundTintOff()
+                ivSeat16.changeBackgroundTintOff()
+                ivSeat48.changeBackgroundTintOff()
+                ivSeat70.changeBackgroundTintOff()
+
+                ivSeat1.changeBackgroundTintOn()
+                ivSeat17.changeBackgroundTintOn()
+            }
+            return
+        }
     }
 
     private fun controlPickSeat() {

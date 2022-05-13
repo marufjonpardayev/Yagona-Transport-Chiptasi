@@ -41,8 +41,15 @@ class TicketsFragment : Fragment() {
     }
 
     private fun initViews() {
+        if (arguments?.get("fromMoscow").toString() == "true"){
+            binding.tvDirection.text =
+                "Toshkent-${loadData2(requireContext())}"
 
-        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
+        }else{
+            binding.tvDirection.text =
+                "${loadData(requireContext())}-${loadData2(requireContext())}"
+
+        }
 
         refreshAdapter(allTickets())
 
