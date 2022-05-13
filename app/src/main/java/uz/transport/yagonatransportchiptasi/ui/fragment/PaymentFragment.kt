@@ -101,6 +101,7 @@ class PaymentFragment : Fragment() {
 
     private fun callTicketActivity() {
         val intent = Intent(requireActivity(), TicketActivity::class.java)
+        intent.putExtra("fromMoscow", arguments?.get("fromMoscow").toString())
         startActivity(intent)
     }
 }

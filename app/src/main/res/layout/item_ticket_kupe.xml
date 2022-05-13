@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="141 270 so'm"
+            android:text="116 270 so'm"
             android:gravity="end"
             android:textStyle="bold"
             android:textColor="#03A9F4"

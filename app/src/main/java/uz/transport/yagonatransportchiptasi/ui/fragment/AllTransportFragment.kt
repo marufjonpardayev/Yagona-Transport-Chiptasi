@@ -15,11 +15,13 @@ import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 class AllTransportFragment : Fragment() {
 
     private lateinit var binding: FragmentAllTransportBinding
-    var departureTime:String = ""
+    var departureTime: String = ""
+    var fromMoscow: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         departureTime = arguments?.get("date").toString()
+        fromMoscow = arguments?.get("fromMoscow").toString()
     }
 
     override fun onCreateView(
@@ -35,16 +37,38 @@ class AllTransportFragment : Fragment() {
 
         binding = FragmentAllTransportBinding.bind(view)
 
+        if (fromMoscow == "true") {
+            binding.apply {
+                tvPlaneCost.text = "4 020 500 so'm"
+                tvPlaneCost1.text = "4 020 500 so'm"
+                tvPlaneCost2.text = "4 500 990 so'm"
+
+                tvTrainCost.text = "287 000 so'm"
+                tvTrainCostUmumiy.text = "287 000 so'm"
+                llSharq.visibility = View.GONE
+                llAfrosiyob.visibility = View.GONE
+            }
+        }
+
         binding.btnShowBuses.setOnClickListener {
-            findNavController().navigate(R.id.action_allTransportFragment_to_busFragment, bundleOf("date" to departureTime))
+            findNavController().navigate(
+                R.id.action_allTransportFragment_to_busFragment,
+                bundleOf("date" to departureTime)
+            )
         }
 
         binding.btnShowFlights.setOnClickListener {
-            findNavController().navigate(R.id.action_allTransportFragment_to_planeFragment, bundleOf("date" to departureTime))
+            findNavController().navigate(
+                R.id.action_allTransportFragment_to_planeFragment,
+                bundleOf("date" to departureTime)
+            )
         }
 
         binding.btnShowTrains.setOnClickListener {
-            findNavController().navigate(R.id.action_allTransportFragment_to_trainDetailsFragment, bundleOf("date" to departureTime))
+            findNavController().navigate(
+                R.id.action_allTransportFragment_to_trainDetailsFragment,
+                bundleOf("date" to departureTime,"fromMoscow" to fromMoscow)
+            )
         }
 
         binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"

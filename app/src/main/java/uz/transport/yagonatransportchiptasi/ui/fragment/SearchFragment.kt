@@ -49,9 +49,7 @@ class SearchFragment : Fragment() {
         initViews()
     }
 
-
     private fun initViews() {
-
         CURRENT_CLICKED_POSITION = 0
         binding.apply {
             tvDeparture.text = giveDate().convertEnglishDateToUzbek()
@@ -85,7 +83,6 @@ class SearchFragment : Fragment() {
                 openToFragment()
             }
         }
-
         controlTypeClick()
     }
 
@@ -174,7 +171,6 @@ class SearchFragment : Fragment() {
         binding.tvTo.text = loadData2(requireContext())
     }
 
-
     private fun openPassengerSetupFragment() {
         if (binding.tvDeparture.isNotEmpty()) {
             when (CURRENT_CLICKED_POSITION) {
@@ -195,7 +191,7 @@ class SearchFragment : Fragment() {
                         .show()
                 }
             }
-        }else{
+        } else {
             Toast.makeText(requireContext(), "Vaqt belgilanmadi", Toast.LENGTH_SHORT).show()
         }
     }
@@ -222,10 +218,17 @@ class SearchFragment : Fragment() {
     }
 
     private fun openAllOptionsTransport() {
-        findNavController().navigate(
-            R.id.action_searchFragment_to_allTransportFragment,
-            bundleOf("date" to departureDateTime)
-        )
+        if (binding.tvFrom.text.toString().lowercase() == "moskva") {
+            findNavController().navigate(
+                R.id.action_searchFragment_to_allTransportFragment,
+                bundleOf("date" to departureDateTime, "fromMoscow" to "true")
+            )
+        } else {
+            findNavController().navigate(
+                R.id.action_searchFragment_to_allTransportFragment,
+                bundleOf("date" to departureDateTime, "fromMoscow" to "false")
+            )
+        }
     }
 
     private fun openFromFragment() {

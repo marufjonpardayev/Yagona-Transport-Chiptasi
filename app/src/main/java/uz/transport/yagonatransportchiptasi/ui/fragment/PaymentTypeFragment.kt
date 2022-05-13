@@ -36,7 +36,8 @@ class PaymentTypeFragment : Fragment() {
                 R.id.action_paymentTypeFragment_to_paymentFragment,
                 bundleOf(
                     "passengerDetails" to arguments?.get("passengerDetails"),
-                    "departureDate" to arguments?.get("departureDate")
+                    "departureDate" to arguments?.get("departureDate"),
+                    "fromMoscow" to arguments?.get("fromMoscow").toString()
                 )
             )
         }

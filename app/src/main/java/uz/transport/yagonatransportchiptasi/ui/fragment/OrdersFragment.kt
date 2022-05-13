@@ -57,7 +57,9 @@ class OrdersFragment : Fragment() {
     }
 
     private fun openTicketActivity() {
-        startActivity(Intent(requireActivity(), TicketActivity::class.java))
+        val intent = Intent(requireActivity(), TicketActivity::class.java)
+        intent.putExtra("fromMoscow", "false")
+        startActivity(intent)
     }
 
     private fun getOrdersFromDatabase(): ArrayList<Order> {

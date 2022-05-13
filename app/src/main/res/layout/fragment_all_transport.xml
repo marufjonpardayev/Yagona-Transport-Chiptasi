@@ -298,6 +298,7 @@
                             android:textSize="10sp" />
 
                         <TextView
+                            android:id="@+id/tvPlaneCost1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -330,6 +331,7 @@
                             android:textSize="10sp" />
 
                         <TextView
+                            android:id="@+id/tvPlaneCost2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -393,6 +395,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llSharq"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp">
@@ -413,6 +416,7 @@
                             android:textSize="10sp" />
 
                         <TextView
+                            android:id="@+id/tvTrainCostSharq"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -445,6 +449,7 @@
                             android:textSize="10sp" />
 
                         <TextView
+                            android:id="@+id/tvTrainCostUmumiy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -457,6 +462,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llAfrosiyob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp">
@@ -477,6 +483,7 @@
                             android:textSize="10sp" />
 
                         <TextView
+                            android:id="@+id/tvTrainCostAfrosiyob"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
