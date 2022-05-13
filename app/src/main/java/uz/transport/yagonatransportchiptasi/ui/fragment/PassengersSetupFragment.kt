@@ -192,7 +192,8 @@ class PassengersSetupFragment : Fragment() {
             bundleOf(
                 "passengers" to passengers,
                 "departureDate" to arguments?.get("departureDate"),
-                "pickedSeatsList" to pickedSeatsList
+                "pickedSeatsList" to pickedSeatsList,
+                "fromMoscow" to arguments?.get("fromMoscow").toString()
             )
         )
     }

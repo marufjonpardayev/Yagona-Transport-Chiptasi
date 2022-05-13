@@ -1,32 +1,23 @@
 package uz.transport.yagonatransportchiptasi.ui.activity
 
 import android.content.pm.ActivityInfo
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import uz.transport.yagonatransportchiptasi.databinding.ActivityTicketBinding
+import com.github.barteksc.pdfviewer.PDFView
+import uz.transport.yagonatransportchiptasi.R
 
 class TicketActivity : AppCompatActivity() {
-    lateinit var binding: ActivityTicketBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTicketBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_ticket)
 
-
-        binding.pdfViewer.fromAsset("ticket.pdf").load()
+        val pdfView = findViewById<PDFView>(R.id.pdfViewer)
+        pdfView.fromAsset("ticket.pdf").load()
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
-        window.setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
-            WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-
-
-        binding.btnDownload.setOnClickListener {
-            Toast.makeText(this, "Pdf yuklab olindi", Toast.LENGTH_SHORT).show()
-        }
+        window.setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE, WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
     }
 }

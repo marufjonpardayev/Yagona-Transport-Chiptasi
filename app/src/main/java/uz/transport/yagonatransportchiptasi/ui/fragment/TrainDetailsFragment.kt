@@ -56,7 +56,7 @@ class TrainDetailsFragment : Fragment() {
         val adapter = TrainAdapter(requireContext(), items) { type ->
             findNavController().navigate(
                 R.id.action_trainDetailsFragment_to_ticketsFragment,
-                bundleOf("type" to type,  "date" to departureTime)
+                bundleOf("type" to type,  "date" to departureTime,"fromMoscow" to arguments?.get("fromMoscow").toString())
             )
         }
         binding.recyclerView.adapter = adapter

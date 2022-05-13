@@ -97,7 +97,8 @@ class PassengerDetailFragment : Fragment() {
             R.id.action_passengerDetailFragment_to_paymentTypeFragment,
             bundleOf(
                 "passengerDetails" to passengerDetailAdapter.passengerDetails,
-                "departureDate" to arguments?.get("departureDate")
+                "departureDate" to arguments?.get("departureDate"),
+                "fromMoscow" to arguments?.get("fromMoscow").toString()
             )
         )
     }
@@ -125,8 +126,6 @@ class PassengerDetailFragment : Fragment() {
             bottomSheet.findViewById<AppCompatSpinner>(R.id.spinnerDocumentType)
         val spinnerCountry = bottomSheet.findViewById<AppCompatSpinner>(R.id.spinnerCountry)
         val spinnerCity = bottomSheet.findViewById<AppCompatSpinner>(R.id.spinnerCity)
-        val spinnerPrivilege = bottomSheet.findViewById<AppCompatSpinner>(R.id.spinnerPrivilege)
-        val checkboxPrivilege = bottomSheet.findViewById<CheckBox>(R.id.checkboxPrivilege)
 
         val resources = requireActivity().resources
 
@@ -152,8 +151,8 @@ class PassengerDetailFragment : Fragment() {
                     PassengerDetail(
                         "Shukurov",
                         "Murodulla",
-                        "somename",
-                        "12/12/2022",
+                        "Sulaymon o'g'li",
+                        "06/07/2000",
                         'M',
                         "AC1023456"
                     )
@@ -205,8 +204,6 @@ class PassengerDetailFragment : Fragment() {
             hideBottomSheet()
             clearEdittextAreas()
         }
-
-
     }
 
     private fun addToPassengerDetails(passengerDetail: PassengerDetail, position: Int) {
