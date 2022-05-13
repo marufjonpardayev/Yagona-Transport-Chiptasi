@@ -25,6 +25,7 @@
 
 
             <ImageView
+                android:id="@+id/ivBack"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="5dp"
@@ -63,8 +64,8 @@
             android:background="@color/white">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/img_payme" />
 
@@ -79,7 +80,7 @@
                     android:layout_marginTop="20dp"
                     android:text="PayMe"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -87,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:text="UzCard,Humo"
                     android:textColor="@color/darker_grey"
-                    android:textSize="16dp" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
 
@@ -115,8 +116,8 @@
             android:background="@color/white">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/hamkor" />
 
@@ -131,7 +132,7 @@
                     android:layout_marginTop="20dp"
                     android:text="HamkorBank"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -139,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:text="UzCard,Humo -har qanday bank kartalari"
                     android:textColor="@color/darker_grey"
-                    android:textSize="16dp" />
+                    android:textSize="15dp" />
             </LinearLayout>
 
 
@@ -168,8 +169,8 @@
 
             <ImageView
                 android:id="@+id/btn_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:background="@color/white"
                 android:src="@drawable/stripe" />
@@ -185,7 +186,7 @@
                     android:layout_marginTop="20dp"
                     android:text="Stripe"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -193,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:text="Visa,MasterCard,Maestro,American Express"
                     android:textColor="@color/darker_grey"
-                    android:textSize="14dp" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
 

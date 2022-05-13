@@ -1,6 +1,7 @@
 package uz.transport.yagonatransportchiptasi.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -52,6 +53,8 @@ class PassengersSetupFragment : Fragment() {
         binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
 
         binding.tvWagonNumber.text = wagonNumber.toString()
+
+        binding.tvDepartureTime.text = arguments?.get("departureDate").toString()
 
         binding.apply {
 
@@ -107,49 +110,14 @@ class PassengersSetupFragment : Fragment() {
 
             checkboxDown.setOnCheckedChangeListener { _, b ->
                 checkboxDown.selectOneAtLeast(checkboxUp, b)
-                controlSeats(b, checkboxUp.isChecked)
             }
 
             checkboxUp.setOnCheckedChangeListener { _, b ->
                 checkboxUp.selectOneAtLeast(checkboxDown, b)
-                controlSeats(b, checkboxDown.isChecked)
             }
         }
 
         controlPickSeat()
-    }
-
-    private fun controlSeats(checkboxDown: Boolean, checkboxUp: Boolean) {
-        if (checkboxDown && checkboxUp) {
-            binding.apply {
-                ivSeat1.changeBackgroundTintCenter()
-                ivSeat6.changeBackgroundTintCenter()
-                ivSeat16.changeBackgroundTintCenter()
-                ivSeat17.changeBackgroundTintCenter()
-                ivSeat48.changeBackgroundTintCenter()
-                ivSeat70.changeBackgroundTintCenter()
-            }
-        } else if (checkboxDown) {
-            binding.apply {
-                ivSeat1.changeBackgroundTintCenter()
-                ivSeat17.changeBackgroundTintCenter()
-
-                ivSeat6.changeBackgroundTint()
-                ivSeat16.changeBackgroundTint()
-                ivSeat48.changeBackgroundTint()
-                ivSeat70.changeBackgroundTint()
-            }
-        } else {
-            binding.apply {
-                ivSeat6.changeBackgroundTintCenter()
-                ivSeat16.changeBackgroundTintCenter()
-                ivSeat48.changeBackgroundTintCenter()
-                ivSeat70.changeBackgroundTintCenter()
-
-                ivSeat1.changeBackgroundTint()
-                ivSeat17.changeBackgroundTint()
-            }
-        }
     }
 
     private fun controlPickSeat() {

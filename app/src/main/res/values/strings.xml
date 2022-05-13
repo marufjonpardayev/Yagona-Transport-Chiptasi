@@ -272,6 +272,7 @@
     <string-array name="privileges">
         <item>Talaba</item>
         <item>Urush qatnashchisi</item>
-        <item>Harbiy</item>
+        <item>Harbiy xizmatchilar</item>
+        <item>Nogiron</item>
     </string-array>
 </resources>

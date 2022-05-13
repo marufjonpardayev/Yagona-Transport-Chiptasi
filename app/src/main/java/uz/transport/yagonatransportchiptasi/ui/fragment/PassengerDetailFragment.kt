@@ -34,6 +34,7 @@ class PassengerDetailFragment : Fragment() {
     private lateinit var sheetBehavior: BottomSheetBehavior<View>
     private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
     private lateinit var pickedSeatsList: ArrayList<Int>
+    private lateinit var passengerDetail: PassengerDetail
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +66,10 @@ class PassengerDetailFragment : Fragment() {
     private fun initViews() {
 
         binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
+
+        binding.ivBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
 
         sheetBehavior = BottomSheetBehavior.from(bottomSheet)
         hideBottomSheet()
@@ -137,16 +142,31 @@ class PassengerDetailFragment : Fragment() {
 
         setAdapterToSpinner(resources.getStringArray(R.array.regions), spinnerCity)
 
-        setAdapterToSpinner(resources.getStringArray(R.array.privileges), spinnerPrivilege)
-
-        controlPrivilege(checkboxPrivilege, spinnerPrivilege)
-
         edtBirthDate.setOnClickListener {
             showCalendarDialog(edtBirthDate)
         }
 
         btnRegisterOneId.setOnClickListener {
-            showOneIDLoginDialog()
+            val dialogView = DialogView { oneID ->
+                passengerDetail =
+                    PassengerDetail(
+                        "Shukurov",
+                        "Murodulla",
+                        "somename",
+                        "12/12/2022",
+                        'M',
+                        "AC1023456"
+                    )
+                edtSurname.setText(passengerDetail.surname)
+                edtName.setText(passengerDetail.name)
+                edtMiddleName.setText(passengerDetail.middleName)
+                edtBirthDate.setText(passengerDetail.dateOfBirth)
+                edtDocumentNumber.setText(passengerDetail.documentNumber)
+                if (passengerDetail.gender == 'M') rbMale.isChecked = true
+                else rbFemale.isChecked = true
+            }
+
+            dialogView.showOneIDLoginDialog(requireActivity())
         }
 
         fun clearEdittextAreas() {
@@ -155,8 +175,6 @@ class PassengerDetailFragment : Fragment() {
             clearEdittextArea(edtMiddleName)
             clearEdittextArea(edtBirthDate)
             clearEdittextArea(edtDocumentNumber)
-            checkboxPrivilege.isChecked = false
-            spinnerPrivilege.visibility = View.GONE
         }
 
         btnAddPassenger.setOnClickListener {
@@ -167,8 +185,6 @@ class PassengerDetailFragment : Fragment() {
             val dateOfBirth = edtBirthDate.text.toString()
             val gender = if (rbMale.isChecked) 'M' else 'F'
             val documentNumber = edtDocumentNumber.text.toString()
-            val privilege =
-                if (checkboxPrivilege.isChecked) spinnerPrivilege.selectedItem.toString() else null
 
             val passengerDetail = PassengerDetail(
                 surname,
@@ -176,8 +192,7 @@ class PassengerDetailFragment : Fragment() {
                 middleName,
                 dateOfBirth,
                 gender,
-                documentNumber,
-                privilege
+                documentNumber
             )
 
             addToPassengerDetails(passengerDetail, position)
@@ -190,6 +205,8 @@ class PassengerDetailFragment : Fragment() {
             hideBottomSheet()
             clearEdittextAreas()
         }
+
+
     }
 
     private fun addToPassengerDetails(passengerDetail: PassengerDetail, position: Int) {
@@ -198,16 +215,6 @@ class PassengerDetailFragment : Fragment() {
 
     private fun clearEdittextArea(editText: EditText) {
         editText.text.clear()
-    }
-
-    private fun controlPrivilege(checkBox: CheckBox, spinner: AppCompatSpinner) {
-        checkBox.setOnClickListener {
-            if (checkBox.isChecked) {
-                spinner.visibility = View.VISIBLE
-            } else {
-                spinner.visibility = View.GONE
-            }
-        }
     }
 
     private fun setAdapterToSpinner(entries: Array<String>, spinner: AppCompatSpinner) {
@@ -244,14 +251,6 @@ class PassengerDetailFragment : Fragment() {
             val date = "$day/${month + 1}/$year"
             edtBirthDate.setText(date)
         }
-    }
-
-    private fun showOneIDLoginDialog() {
-        val dialogView = DialogView { oneID ->
-            //send request to server to get data combined with oneID
-        }
-
-        dialogView.showOneIDLoginDialog(requireActivity())
     }
 
     private fun refreshAdapter(passengers: ArrayList<PassengerStatus>) {

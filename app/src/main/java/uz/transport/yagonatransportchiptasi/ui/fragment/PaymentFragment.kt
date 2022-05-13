@@ -51,6 +51,10 @@ class PaymentFragment : Fragment() {
 
         binding = FragmentPaymentBinding.bind(view)
 
+        binding.ivBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
         fillOrderList()
 
         binding.btnNext.setOnClickListener {

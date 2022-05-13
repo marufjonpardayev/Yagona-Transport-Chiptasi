@@ -27,7 +27,10 @@ class PaymentTypeFragment : Fragment() {
 
         binding = FragmentPaymentTypeBinding.bind(view)
 
-        //open
+        binding.ivBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
         binding.cvPayme.setOnClickListener {
             findNavController().navigate(
                 R.id.action_paymentTypeFragment_to_paymentFragment,

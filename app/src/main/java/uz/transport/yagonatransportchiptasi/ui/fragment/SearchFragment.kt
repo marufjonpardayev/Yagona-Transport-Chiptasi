@@ -2,10 +2,9 @@ package uz.transport.yagonatransportchiptasi.ui.fragment
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,12 +12,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.os.bundleOf
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.FragmentSearchBinding
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.convertEnglishDateToUzbek
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.isNotEmpty
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.setBackgroundChangeIconTint
+import uz.transport.yagonatransportchiptasi.extensions.Extensions.setBackgroundChangeIconTintClick
 import uz.transport.yagonatransportchiptasi.ui.activity.CalendarActivity
 import uz.transport.yagonatransportchiptasi.ui.activity.FromActivity
 import uz.transport.yagonatransportchiptasi.ui.activity.ToActivity
@@ -30,6 +32,9 @@ class SearchFragment : Fragment() {
 
     private lateinit var binding: FragmentSearchBinding
     var departureDateTime: String = ""
+    var CURRENT_CLICKED_POSITION = 0
+    var LAST_CLICKED_POSITION = -1
+    var clicks = arrayOf(true, false, false, false)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,12 +52,8 @@ class SearchFragment : Fragment() {
 
     private fun initViews() {
 
+        CURRENT_CLICKED_POSITION = 0
         binding.apply {
-            ivChange.setOnClickListener {
-                changeDestinations()
-            }
-
-
             /**
              * this is Select the Departure date from the calendar
              */
@@ -67,15 +68,8 @@ class SearchFragment : Fragment() {
                 openCalendarActivity(2)
             }
 
-            tvDeparture.text = giveDate()
-            departureDateTime = giveDate()
-
             btnSearch.setOnClickListener {
-                if (tvFrom.text.toString().trim().lowercase() == "moskva") {
-                    openWaytoGoFragment()
-                } else {
-                    openPassengerSetupFragment()
-                }
+                openPassengerSetupFragment()
             }
 
             ivClose.setOnClickListener {
@@ -89,10 +83,87 @@ class SearchFragment : Fragment() {
                 openToFragment()
             }
         }
+
+        controlTypeClick()
     }
 
-    private fun openWaytoGoFragment() {
-        findNavController().navigate(R.id.action_searchFragment_to_waytoGoFragment)
+    private fun controlTypeClick() {
+        binding.apply {
+            tvAll.setOnClickListener {
+                CURRENT_CLICKED_POSITION = 0
+                manageClicksList(CURRENT_CLICKED_POSITION)
+                if (checkIfClicked(CURRENT_CLICKED_POSITION)) {
+                    tvAll.setBackgroundChangeIconTintClick()
+                    clearEarlierClick(LAST_CLICKED_POSITION)
+                    manageClicksList(CURRENT_CLICKED_POSITION)
+                    LAST_CLICKED_POSITION = 0
+                } else {
+                    tvAll.setBackgroundChangeIconTint()
+                }
+            }
+
+            ivPlane.setOnClickListener {
+                CURRENT_CLICKED_POSITION = 1
+                manageClicksList(CURRENT_CLICKED_POSITION)
+                if (checkIfClicked(CURRENT_CLICKED_POSITION)) {
+                    ivPlane.setBackgroundChangeIconTintClick()
+                    clearEarlierClick(LAST_CLICKED_POSITION)
+                    manageClicksList(CURRENT_CLICKED_POSITION)
+                    LAST_CLICKED_POSITION = 1
+                } else {
+                    ivPlane.setBackgroundChangeIconTint()
+                }
+            }
+
+            ivTrain.setOnClickListener {
+                CURRENT_CLICKED_POSITION = 2
+                manageClicksList(CURRENT_CLICKED_POSITION)
+                if (checkIfClicked(CURRENT_CLICKED_POSITION)) {
+                    ivTrain.setBackgroundChangeIconTintClick()
+                    clearEarlierClick(LAST_CLICKED_POSITION)
+                    manageClicksList(CURRENT_CLICKED_POSITION)
+                    LAST_CLICKED_POSITION = 2
+                } else {
+                    ivTrain.setBackgroundChangeIconTint()
+                }
+            }
+
+            ivBus.setOnClickListener {
+                CURRENT_CLICKED_POSITION = 3
+                manageClicksList(CURRENT_CLICKED_POSITION)
+                if (checkIfClicked(CURRENT_CLICKED_POSITION)) {
+                    ivBus.setBackgroundChangeIconTintClick()
+                    clearEarlierClick(LAST_CLICKED_POSITION)
+                    manageClicksList(CURRENT_CLICKED_POSITION)
+                    LAST_CLICKED_POSITION = 3
+                } else {
+                    ivBus.setBackgroundChangeIconTint()
+                }
+            }
+        }
+    }
+
+    private fun clearEarlierClick(lastClickedPosition: Int) {
+        when (lastClickedPosition) {
+            0 -> {
+                binding.tvAll.setBackgroundChangeIconTint()
+            }
+            1 -> {
+                binding.ivPlane.setBackgroundChangeIconTint()
+            }
+            2 -> {
+                binding.ivTrain.setBackgroundChangeIconTint()
+            }
+            3 -> {
+                binding.ivBus.setBackgroundChangeIconTint()
+            }
+        }
+    }
+
+    private fun checkIfClicked(position: Int): Boolean = clicks[position]
+
+    private fun manageClicksList(lastClickedPosition: Int) {
+        clicks[lastClickedPosition] = !clicks[lastClickedPosition]
     }
 
     override fun onResume() {
@@ -103,7 +174,56 @@ class SearchFragment : Fragment() {
 
 
     private fun openPassengerSetupFragment() {
-        findNavController().navigate(R.id.action_searchFragment_to_allTransportFragment, bundleOf("date" to departureDateTime))
+        if (binding.tvDeparture.isNotEmpty()) {
+            when (CURRENT_CLICKED_POSITION) {
+                0 -> {
+                    openAllOptionsTransport()
+                }
+                1 -> {
+                    openPlaneFragment()
+                }
+                2 -> {
+                    openTrainFragment()
+                }
+                3 -> {
+                    openBusFragment()
+                }
+                else -> {
+                    Toast.makeText(requireContext(), "Transport turini tanlang", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+        }else{
+            Toast.makeText(requireContext(), "Vaqt belgilanmadi", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun openBusFragment() {
+        findNavController().navigate(
+            R.id.action_searchFragment_to_busFragment,
+            bundleOf("date" to departureDateTime)
+        )
+    }
+
+    private fun openTrainFragment() {
+        findNavController().navigate(
+            R.id.action_searchFragment_to_trainDetailsFragment,
+            bundleOf("date" to departureDateTime)
+        )
+    }
+
+    private fun openPlaneFragment() {
+        findNavController().navigate(
+            R.id.action_searchFragment_to_planeFragment,
+            bundleOf("date" to departureDateTime)
+        )
+    }
+
+    private fun openAllOptionsTransport() {
+        findNavController().navigate(
+            R.id.action_searchFragment_to_allTransportFragment,
+            bundleOf("date" to departureDateTime)
+        )
     }
 
     private fun openFromFragment() {
@@ -119,8 +239,8 @@ class SearchFragment : Fragment() {
     @SuppressLint("SimpleDateFormat")
     fun giveDate(): String {
         val cal: Calendar = Calendar.getInstance()
-        val sdf = SimpleDateFormat("EEE, MMM d")
-        return sdf.format(cal.getTime())
+        val sdf = SimpleDateFormat("EEE,MMM d")
+        return sdf.format(cal.time)
     }
 
     private fun openCalendarActivity(type: Int) {
@@ -146,32 +266,23 @@ class SearchFragment : Fragment() {
              * this is change the time format
              */
             val originalFormat = SimpleDateFormat("dd MM yyyy")
-            val targetFormat = SimpleDateFormat("EEE, MMM d")
+            val targetFormat = SimpleDateFormat("EEE,MMM d")
             val date: Date
             try {
                 date = originalFormat.parse("$day $month $year")
                 if (type.toInt() == 1) {
-                    binding.tvDeparture.text = targetFormat.format(date).toString()
-                    departureDateTime = targetFormat.format(date).toString()
+                    binding.tvDeparture.text =
+                        targetFormat.format(date).toString().convertEnglishDateToUzbek()
+                    departureDateTime = binding.tvDeparture.text.toString()
                 } else {
-                    binding.tvArrival.text = targetFormat.format(date).toString()
+                    binding.tvArrival.text =
+                        targetFormat.format(date).toString().convertEnglishDateToUzbek()
                     binding.ivClose.visibility = View.VISIBLE
                 }
             } catch (ex: ParseException) {
 
             }
 
-        }
-    }
-
-    //to change directions
-    private fun changeDestinations() {
-        binding.apply {
-            if (tvFrom.text.isNotEmpty() && tvTo.text.isNotEmpty()) {
-                val departure = tvFrom.text
-                tvFrom.text = tvTo.text
-                tvTo.text = departure
-            }
         }
     }
 }

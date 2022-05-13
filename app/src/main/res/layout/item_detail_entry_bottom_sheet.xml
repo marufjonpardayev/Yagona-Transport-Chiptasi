@@ -259,39 +259,6 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/black" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:gravity="center_vertical">
-
-                        <CheckBox
-                            android:id="@+id/checkboxPrivilege"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Imtiyozlar"
-                            android:textColor="@color/black"
-                            android:theme="@style/WhiteCheck"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <androidx.appcompat.widget.AppCompatSpinner
-                            android:id="@+id/spinnerPrivilege"
-                            style="@style/Spinner"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end|center_vertical"
-                            android:backgroundTint="@color/black"
-                            android:popupBackground="@color/white"
-                            android:popupTheme="@style/Spinner"
-                            android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/checkboxPrivilege"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <Button
                         android:id="@+id/btnAddPassenger"

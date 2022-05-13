@@ -52,6 +52,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/tv_departureTime"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -69,12 +70,12 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_below="@id/appBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/linear">
+        android:layout_above="@id/linear"
+        android:layout_below="@id/appBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -486,7 +487,8 @@
                                 android:id="@+id/ivSeat3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="15dp"
@@ -508,7 +510,8 @@
                                 android:id="@+id/ivSeat5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="15dp"
@@ -530,7 +533,8 @@
                                 android:id="@+id/ivSeat7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -553,7 +557,8 @@
                                 android:id="@+id/ivSeat9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -576,7 +581,8 @@
                                 android:id="@+id/ivSeat11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -599,7 +605,8 @@
                                 android:id="@+id/ivSeat13"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="30dp"
@@ -621,7 +628,8 @@
                                 android:id="@+id/ivSeat15"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -668,7 +676,8 @@
                                 android:id="@+id/ivSeat19"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -691,7 +700,8 @@
                                 android:id="@+id/ivSeat21"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -714,7 +724,8 @@
                                 android:id="@+id/ivSeat23"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -737,7 +748,8 @@
                                 android:id="@+id/ivSeat25"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -760,7 +772,8 @@
                                 android:id="@+id/ivSeat27"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -783,7 +796,8 @@
                                 android:id="@+id/ivSeat29"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -806,7 +820,8 @@
                                 android:id="@+id/ivSeat31"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -829,7 +844,8 @@
                                 android:id="@+id/ivSeat33"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -852,7 +868,8 @@
                                 android:id="@+id/ivSeat35"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -875,7 +892,8 @@
                                 android:id="@+id/ivSeat37"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="30dp"
@@ -897,7 +915,8 @@
                                 android:id="@+id/ivSeat39"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="30dp"
@@ -919,7 +938,8 @@
                                 android:id="@+id/ivSeat41"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -942,7 +962,8 @@
                                 android:id="@+id/ivSeat43"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -965,7 +986,8 @@
                                 android:id="@+id/ivSeat45"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -988,7 +1010,8 @@
                                 android:id="@+id/ivSeat47"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1012,7 +1035,8 @@
                                 android:id="@+id/ivSeat2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1035,7 +1059,8 @@
                                 android:id="@+id/ivSeat4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1081,7 +1106,8 @@
                                 android:id="@+id/ivSeat8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1104,7 +1130,8 @@
                                 android:id="@+id/ivSeat10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="30dp"
@@ -1126,7 +1153,8 @@
                                 android:id="@+id/ivSeat12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1149,7 +1177,8 @@
                                 android:id="@+id/ivSeat14"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1196,7 +1225,8 @@
                                 android:id="@+id/ivSeat18"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1219,7 +1249,8 @@
                                 android:id="@+id/ivSeat20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1242,7 +1273,8 @@
                                 android:id="@+id/ivSeat22"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1265,7 +1297,8 @@
                                 android:id="@+id/ivSeat24"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1288,7 +1321,8 @@
                                 android:id="@+id/ivSeat26"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1311,7 +1345,8 @@
                                 android:id="@+id/ivSeat28"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1334,7 +1369,8 @@
                                 android:id="@+id/ivSeat30"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1357,7 +1393,8 @@
                                 android:id="@+id/ivSeat32"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1380,7 +1417,8 @@
                                 android:id="@+id/ivSeat34"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1403,7 +1441,8 @@
                                 android:id="@+id/ivSeat36"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1426,7 +1465,8 @@
                                 android:id="@+id/ivSeat38"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1449,7 +1489,8 @@
                                 android:id="@+id/ivSeat40"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1472,7 +1513,8 @@
                                 android:id="@+id/ivSeat42"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1495,7 +1537,8 @@
                                 android:id="@+id/ivSeat44"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1518,7 +1561,8 @@
                                 android:id="@+id/ivSeat46"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_one" />
+                                android:src="@drawable/space_one"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1566,7 +1610,8 @@
                                 android:id="@+id/ivSeat72"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1588,7 +1633,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1634,7 +1680,8 @@
                                 android:id="@+id/ivSeat69"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1656,7 +1703,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1678,7 +1726,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1700,7 +1749,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1722,7 +1772,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1744,7 +1795,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1766,7 +1818,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1788,7 +1841,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1810,7 +1864,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1832,7 +1887,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1854,7 +1910,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1876,7 +1933,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1898,7 +1956,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1920,10 +1979,10 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
-
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="27dp"
@@ -1942,7 +2001,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -1963,7 +2023,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
 
@@ -1985,7 +2046,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -2006,7 +2068,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -2027,7 +2090,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -2048,7 +2112,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -2069,7 +2134,8 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/space_left" />
+                                android:src="@drawable/space_left"
+                                app:tint="@color/grey" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -2088,6 +2154,7 @@
                             android:layout_marginTop="160dp">
 
                             <ImageView
+                                app:tint="@color/grey"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/space_left" />
@@ -2112,10 +2179,10 @@
     </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:background="@color/white"
         android:gravity="center_vertical">

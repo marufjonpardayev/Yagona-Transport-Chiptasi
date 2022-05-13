@@ -79,11 +79,47 @@ object Extensions {
         }
     }
 
-    fun ImageView.changeBackgroundTint(){
+    fun ImageView.changeBackgroundTint() {
         this.setColorFilter(Color.argb(255, 51, 103, 153))
     }
 
-    fun ImageView.changeBackgroundTintCenter(){
+    fun ImageView.changeBackgroundTintCenter() {
         this.setColorFilter(Color.argb(255, 1, 132, 252))
+    }
+
+    fun ImageView.setBackgroundChangeIconTintClick() {
+        this.setBackgroundResource(R.drawable.circle_imageview_white)
+        this.setColorFilter(Color.argb(255, 0, 0, 0))
+    }
+
+    fun ImageView.setBackgroundChangeIconTint() {
+        this.setBackgroundResource(R.drawable.circle_imageview)
+        this.setColorFilter(Color.argb(255, 255, 255, 255))
+    }
+
+    fun TextView.setBackgroundChangeIconTintClick() {
+        this.setBackgroundResource(R.drawable.circle_imageview_white)
+        this.setTextColor(resources.getColor(R.color.black))
+    }
+
+    fun TextView.setBackgroundChangeIconTint() {
+        this.setBackgroundResource(R.drawable.circle_imageview)
+        this.setTextColor(resources.getColor(R.color.white))
+    }
+
+    fun String.convertEnglishDateToUzbek(): String {
+        val dayOfWeek = this.substring(0, 3)
+        Log.d("TAG", "convertEnglishDateToUzbek: $dayOfWeek")
+        return when (dayOfWeek) {
+            "Mon" -> "Dush" + this.substring(indexOf(","), this.length)
+            "Tue" -> "Sesh" + this.substring(indexOf(","), this.length)
+            "Wed" -> "Chor" + this.substring(indexOf(","), this.length)
+            "Thu" -> "Pay" + this.substring(indexOf(","), this.length)
+            "Fri" -> "Jum" + this.substring(indexOf(","), this.length)
+            "Sat" -> "Shan" + this.substring(indexOf(","), this.length)
+            "Sun" -> "Yak" + this.substring(indexOf(","), this.length)
+            else -> dayOfWeek
+        }
+
     }
 }

@@ -12,8 +12,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="30dp"
-        app:cardMaxElevation="30dp">
+        android:elevation="24dp"
+        app:cardMaxElevation="24dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,8 +56,8 @@
 
                 <ImageView
                     android:id="@+id/btn_image"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_profile_icon"
                     app:tint="#4395F4" />
@@ -69,7 +69,7 @@
                     android:layout_weight="1"
                     android:text="Mening sahifam"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -86,8 +86,8 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_telephone_operator_svgrepo_com"
                     app:tint="#4395F4" />
@@ -99,7 +99,7 @@
                     android:layout_weight="1"
                     android:text="Operator"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -117,8 +117,8 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_tickets_icon" />
 
@@ -129,7 +129,7 @@
                     android:layout_weight="1"
                     android:text="Xaridlarim"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -147,8 +147,8 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_passport_icon"
                     app:tint="#4395F4" />
@@ -160,7 +160,7 @@
                     android:layout_weight="1"
                     android:text="Yo'lovchilarim"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -189,9 +189,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:text="Notifications"
+                    android:text="Bildirishnomalar"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -209,8 +209,8 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_message_icon"
                     app:tint="#4395F4" />
@@ -222,7 +222,7 @@
                     android:layout_weight="1"
                     android:text="Bizga fikr-mulohazalaringizni qoldiring"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -240,8 +240,8 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_language_icon"
                     app:tint="#4395F4" />
@@ -253,7 +253,7 @@
                     android:layout_weight="1"
                     android:text="Ilova tili"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -271,8 +271,8 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_margin="5dp"
                     android:src="@drawable/ic_login_icon"
                     app:tint="#4395F4" />
@@ -283,7 +283,7 @@
                     android:layout_margin="8dp"
                     android:text="Chiqish"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
