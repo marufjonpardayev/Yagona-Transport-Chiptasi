@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
-import android.widget.ImageView
-import android.widget.Toast
 import com.github.barteksc.pdfviewer.PDFView
 import uz.transport.yagonatransportchiptasi.R
 
@@ -29,10 +27,5 @@ class TicketActivity : AppCompatActivity() {
         }
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-
-
-        findViewById<ImageView>(R.id.ivDownload).setOnClickListener {
-            Toast.makeText(this, "Yuklandi", Toast.LENGTH_SHORT).show()
-        }
     }
 }
