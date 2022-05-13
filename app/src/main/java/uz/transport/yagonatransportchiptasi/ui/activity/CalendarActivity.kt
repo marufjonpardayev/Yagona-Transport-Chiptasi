@@ -3,6 +3,7 @@ package uz.transport.yagonatransportchiptasi.ui.activity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -45,9 +46,10 @@ class CalendarActivity : AppCompatActivity() {
 
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("day", "${date.dayOfMonth}")
-            intent.putExtra("month", "${date.month}")
+            intent.putExtra("month", "${date.month + 1}")
             intent.putExtra("year", "${date.year}")
             intent.putExtra("type", "${type}")
+            Log.d("####", "${date.dayOfMonth}, ${date.year}, ${date.month + 1}")
             setResult(RESULT_OK,intent)
             finish()
         }
@@ -73,7 +75,9 @@ class CalendarActivity : AppCompatActivity() {
         calendar.set(year, month + 3, day)
         val maxDate = CalendarDate(calendar.time)
 
-        val firstDayOfWeek = Calendar.MONDAY
+        val firstDayOfWeek = java.util.Calendar.MONDAY
+
+        Log.d("####", firstDayOfWeek.toString())
 
         binding.calendarView.setupCalendar(
             initialDate = initialDate,
