@@ -54,6 +54,8 @@ class SearchFragment : Fragment() {
 
         CURRENT_CLICKED_POSITION = 0
         binding.apply {
+            tvDeparture.text = giveDate().convertEnglishDateToUzbek()
+            departureDateTime = giveDate().convertEnglishDateToUzbek()
             /**
              * this is Select the Departure date from the calendar
              */
