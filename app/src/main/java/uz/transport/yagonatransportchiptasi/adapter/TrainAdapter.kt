@@ -69,7 +69,6 @@ class TrainAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val item = items[position]
         val from = loadData(context)
         val to = loadData2(context)
 
@@ -90,9 +89,15 @@ class TrainAdapter(
                 onItemClicked.invoke(2)
             }
 
+            if (items[position].fromMoscow) {
+                holder.view.tvFrom.text = "Toshkent"
+                holder.view.tvTo.setDirection(to)
+            }else{
+                holder.view.tvFrom.setDirection(from)
+                holder.view.tvTo.setDirection(to)
+            }
+
             holder.view.apply {
-                tvFrom.setDirection(from)
-                tvTo.setDirection(to)
                 tvPlaceNum.setRandom()
                 tvPlaceNumPlast.setRandom()
                 tvPlaceNumKupe.setRandom()

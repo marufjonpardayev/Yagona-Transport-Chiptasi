@@ -10,7 +10,8 @@ import uz.transport.yagonatransportchiptasi.extensions.Extensions
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.setDirection
 import uz.transport.yagonatransportchiptasi.model.PlaneTicket
 
-class PlaneTicketAdapter(val context: Context, val items: ArrayList<PlaneTicket>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class PlaneTicketAdapter(val context: Context, val items: ArrayList<PlaneTicket>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view =
             ItemPlaneListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -20,9 +21,14 @@ class PlaneTicketAdapter(val context: Context, val items: ArrayList<PlaneTicket>
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val from = Extensions.loadData(context)
         val to = Extensions.loadData2(context)
-        if(holder is PlaneTicketViewHolder){
-            holder.view.tvFrom.setDirection(from)
-            holder.view.tvTo.setDirection(to)
+        if (holder is PlaneTicketViewHolder) {
+            if (items[position].fromMoscow) {
+                holder.view.tvFrom.setDirection(from)
+                holder.view.tvTo.setDirection("Toshkent")
+            } else {
+                holder.view.tvFrom.setDirection(from)
+                holder.view.tvTo.setDirection(to)
+            }
         }
     }
 
@@ -30,7 +36,8 @@ class PlaneTicketAdapter(val context: Context, val items: ArrayList<PlaneTicket>
         return items.size
     }
 
-    class PlaneTicketViewHolder(val view:ItemPlaneListBinding) : RecyclerView.ViewHolder(view.root) {
+    class PlaneTicketViewHolder(val view: ItemPlaneListBinding) :
+        RecyclerView.ViewHolder(view.root) {
 
     }
 }

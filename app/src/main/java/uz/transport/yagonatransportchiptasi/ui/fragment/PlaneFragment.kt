@@ -16,10 +16,12 @@ import uz.transport.yagonatransportchiptasi.model.PlaneTicket
 class PlaneFragment : Fragment() {
     lateinit var binding: FragmentPlaneBinding
     var departureTime: String = ""
+    var fromMoscow = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         departureTime = arguments?.get("date").toString()
+        fromMoscow = arguments?.get("fromMoscow").toString()
     }
 
 
@@ -37,8 +39,13 @@ class PlaneFragment : Fragment() {
     }
 
     private fun initViews() {
-
-        binding.tvDirection.text = "${loadData(requireContext())}-${loadData2(requireContext())}"
+        if (fromMoscow == "true") {
+            binding.tvDirection.text =
+                "${loadData(requireContext())}-Toshkent"
+        } else {
+            binding.tvDirection.text =
+                "Toshkent-${loadData2(requireContext())}"
+        }
 
         refreshAdapter(allPlane())
 
@@ -56,10 +63,15 @@ class PlaneFragment : Fragment() {
 
     private fun allPlane(): ArrayList<PlaneTicket> {
         val items = ArrayList<PlaneTicket>()
-
-        items.add(PlaneTicket(1))
-        items.add(PlaneTicket(1))
-        items.add(PlaneTicket(1))
+        if (fromMoscow == "true") {
+            items.add(PlaneTicket(true))
+            items.add(PlaneTicket(true))
+            items.add(PlaneTicket(true))
+        } else {
+            items.add(PlaneTicket(false))
+            items.add(PlaneTicket(false))
+            items.add(PlaneTicket(false))
+        }
 
         return items
     }
