@@ -11,7 +11,6 @@ import uz.transport.yagonatransportchiptasi.databinding.ActivityMainBinding
 import uz.transport.yagonatransportchiptasi.ui.fragment.SearchFragment
 
 class MainActivity : AppCompatActivity() {
-    lateinit var searchFragment: SearchFragment
     lateinit var binding: ActivityMainBinding
     lateinit var navController: NavController
 

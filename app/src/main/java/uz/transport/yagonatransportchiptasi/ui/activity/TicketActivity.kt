@@ -23,10 +23,5 @@ class TicketActivity : AppCompatActivity() {
 
         window.setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
             WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-
-
-        binding.btnDownload.setOnClickListener {
-            Toast.makeText(this, "Pdf yuklab olindi", Toast.LENGTH_SHORT).show()
-        }
     }
 }
