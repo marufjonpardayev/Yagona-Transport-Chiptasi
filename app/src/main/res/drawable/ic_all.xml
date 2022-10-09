@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/ic_bus"
+        android:end="24dp"
+        android:gravity="start|top" />
+    <item
+        android:width="24dp"
+        android:height="24dp"
+        android:drawable="@drawable/ic_plane"
+        android:gravity="top|end"
+        android:start="24dp" />
+    <item
+        android:drawable="@drawable/ic_hotel"
+        android:gravity="bottom|start"
+        android:top="24dp" />
+    <item
+        android:drawable="@drawable/ic_train"
+        android:gravity="bottom|end" />
+
+</layer-list>

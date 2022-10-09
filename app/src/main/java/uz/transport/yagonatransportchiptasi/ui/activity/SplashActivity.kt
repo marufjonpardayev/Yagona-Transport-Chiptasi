@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    fun open() {
+    private fun open() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()

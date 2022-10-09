@@ -9,6 +9,9 @@
     <string name="qayerdan">qayerdan</string>
     <string name="stansiyani_kiriting">stansiyani kiriting</string>
     <string name="qayerga">qayerga</string>
+    <string name="str_kasbingiz">Kasbingiz</string>
+    <string name="str_karta_raqam">Karta raqam (Ixtiyoriy)</string>
+    <string name="str_gender">Jinsingiz</string>
 
     <string-array name="documents">
         <item>O\'zbekiston pasporti</item>
@@ -272,7 +275,7 @@
     <string-array name="privileges">
         <item>Talaba</item>
         <item>Urush qatnashchisi</item>
-        <item>Harbiy xizmatchilar</item>
+        <item>Harbiy xizmatchi</item>
         <item>Nogiron</item>
     </string-array>
 </resources>

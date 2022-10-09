@@ -78,6 +78,7 @@ class ToActivity : AppCompatActivity() {
         toRegions.add("Qoraqalpogiston")
         toRegions.add("Andijon")
         toRegions.add("Namangan")
+        toRegions.add("Navoiy")
         toRegions.add("Fargona")
         toRegions.add("Jizzax")
         toRegions.add("Surxandaryo")

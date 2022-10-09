@@ -78,6 +78,7 @@ class FromActivity : AppCompatActivity() {
         fromRegions.add("Qoraqalpogiston")
         fromRegions.add("Andijon")
         fromRegions.add("Namangan")
+        fromRegions.add("Navoiy")
         fromRegions.add("Fargona")
         fromRegions.add("Jizzax")
         fromRegions.add("Surxandaryo")

@@ -65,11 +65,11 @@ class PassengerDetailFragment : Fragment() {
 
     private fun initViews() {
 
-        if (arguments?.get("fromMoscow").toString() == "true"){
+        if (arguments?.get("fromMoscow").toString() == "true") {
             binding.tvDirection.text =
                 "Toshkent-${loadData2(requireContext())}"
 
-        }else{
+        } else {
             binding.tvDirection.text =
                 "${loadData(requireContext())}-${loadData2(requireContext())}"
 
@@ -134,6 +134,7 @@ class PassengerDetailFragment : Fragment() {
             bottomSheet.findViewById<AppCompatSpinner>(R.id.spinnerDocumentType)
         val spinnerCountry = bottomSheet.findViewById<AppCompatSpinner>(R.id.spinnerCountry)
         val spinnerCity = bottomSheet.findViewById<AppCompatSpinner>(R.id.spinnerCity)
+        val tvPrivilege = bottomSheet.findViewById<TextView>(R.id.tvPrivilege)
 
         val resources = requireActivity().resources
 
@@ -162,7 +163,8 @@ class PassengerDetailFragment : Fragment() {
                         "Sulaymon o'g'li",
                         "06/07/2000",
                         'M',
-                        "AC1023456"
+                        "AC1023456",
+                        oneID.privilege
                     )
                 edtSurname.setText(passengerDetail.surname)
                 edtName.setText(passengerDetail.name)
@@ -171,6 +173,8 @@ class PassengerDetailFragment : Fragment() {
                 edtDocumentNumber.setText(passengerDetail.documentNumber)
                 if (passengerDetail.gender == 'M') rbMale.isChecked = true
                 else rbFemale.isChecked = true
+                tvPrivilege.visibility = View.VISIBLE
+                tvPrivilege.text = passengerDetail.privilege
             }
 
             dialogView.showOneIDLoginDialog(requireActivity())
@@ -182,6 +186,7 @@ class PassengerDetailFragment : Fragment() {
             clearEdittextArea(edtMiddleName)
             clearEdittextArea(edtBirthDate)
             clearEdittextArea(edtDocumentNumber)
+            tvPrivilege.visibility = View.GONE
         }
 
         btnAddPassenger.setOnClickListener {

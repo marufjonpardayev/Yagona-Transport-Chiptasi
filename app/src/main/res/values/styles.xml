@@ -3,4 +3,6 @@
     <style name="CalendarViewCustomStyle">
         <item name="android:background">@android:color/white</item>
     </style>
+    <style name="LoginTextInputLayoutStyleRole" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"/>
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox"/>
 </resources>

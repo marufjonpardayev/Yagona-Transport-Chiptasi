@@ -259,6 +259,15 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/black" />
 
+                    <TextView
+                        android:paddingHorizontal="12dp"
+                        android:id="@+id/tvPrivilege"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:textColor="@color/darker_grey"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
 
                     <Button
                         android:id="@+id/btnAddPassenger"

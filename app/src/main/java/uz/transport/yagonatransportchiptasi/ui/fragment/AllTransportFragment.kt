@@ -60,14 +60,14 @@ class AllTransportFragment : Fragment() {
         binding.btnShowFlights.setOnClickListener {
             findNavController().navigate(
                 R.id.action_allTransportFragment_to_planeFragment,
-                bundleOf("date" to departureTime,"fromMoscow" to fromMoscow)
+                bundleOf("date" to departureTime, "fromMoscow" to fromMoscow)
             )
         }
 
         binding.btnShowTrains.setOnClickListener {
             findNavController().navigate(
                 R.id.action_allTransportFragment_to_trainDetailsFragment,
-                bundleOf("date" to departureTime,"fromMoscow" to fromMoscow)
+                bundleOf("date" to departureTime, "fromMoscow" to fromMoscow)
             )
         }
 
@@ -77,6 +77,14 @@ class AllTransportFragment : Fragment() {
 
         binding.ivBack.setOnClickListener {
             requireActivity().onBackPressed()
+        }
+
+        binding.checkboxTaxi.setOnClickListener {
+            if (binding.checkboxTaxi.isChecked) {
+                binding.llTaxi.visibility = View.VISIBLE
+            } else {
+                binding.llTaxi.visibility = View.GONE
+            }
         }
     }
 }

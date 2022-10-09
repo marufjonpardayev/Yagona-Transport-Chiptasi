@@ -21,6 +21,7 @@ import uz.transport.yagonatransportchiptasi.model.Order
 import uz.transport.yagonatransportchiptasi.model.PassengerDetail
 import uz.transport.yagonatransportchiptasi.model.PassengerStatus
 import uz.transport.yagonatransportchiptasi.ui.activity.TicketActivity
+import kotlin.random.Random
 
 
 class PaymentFragment : Fragment() {
@@ -60,10 +61,13 @@ class PaymentFragment : Fragment() {
         binding.btnNext.setOnClickListener {
             openTicketActivity()
         }
+
+        binding.tvPrice.text = "Ja'mi: ${getRandomPrice()}.876 so'm"
     }
 
+    private fun getRandomPrice(): Int = Random.nextInt(200, 330)
+
     private fun fillOrderList() {
-        Log.d("TAG", "fillOrderList: $passengerDetails")
         passengerDetails.forEach {
             if (it != null) {
                 val fullName = it.name + " " + it.surname + " " + it.middleName

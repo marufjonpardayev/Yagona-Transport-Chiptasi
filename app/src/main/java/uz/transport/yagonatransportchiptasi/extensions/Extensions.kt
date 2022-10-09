@@ -118,8 +118,7 @@ object Extensions {
             "Fri" -> "Jum" + this.substring(indexOf(","), this.length)
             "Sat" -> "Shan" + this.substring(indexOf(","), this.length)
             "Sun" -> "Yak" + this.substring(indexOf(","), this.length)
-            else -> dayOfWeek
+            else -> this
         }
-
     }
 }
