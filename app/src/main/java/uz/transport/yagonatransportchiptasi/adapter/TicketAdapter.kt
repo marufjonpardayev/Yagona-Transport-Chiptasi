@@ -2,13 +2,11 @@ package uz.transport.yagonatransportchiptasi.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import uz.transport.yagonatransportchiptasi.databinding.*
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.setRandomWagonNumber
 import uz.transport.yagonatransportchiptasi.model.Ticket
 import uz.transport.yagonatransportchiptasi.ui.fragment.TicketsFragment
-import kotlin.random.Random
 
 
 class TicketAdapter(

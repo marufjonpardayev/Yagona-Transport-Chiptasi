@@ -2,11 +2,8 @@ package uz.transport.yagonatransportchiptasi.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
-import uz.transport.yagonatransportchiptasi.R
 import uz.transport.yagonatransportchiptasi.databinding.ItemTrainAfrosiyobBinding
 import uz.transport.yagonatransportchiptasi.databinding.ItemTrainPopularBinding
 import uz.transport.yagonatransportchiptasi.databinding.ItemTrainSharqBinding
@@ -16,7 +13,6 @@ import uz.transport.yagonatransportchiptasi.extensions.Extensions.loadData2
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.setDirection
 import uz.transport.yagonatransportchiptasi.extensions.Extensions.setRandom
 import uz.transport.yagonatransportchiptasi.model.Train
-import uz.transport.yagonatransportchiptasi.ui.fragment.TrainDetailsFragment
 
 
 class TrainAdapter(
